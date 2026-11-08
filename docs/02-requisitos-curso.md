@@ -64,4 +64,4 @@ Diseñar, desarrollar, contenerizar y desplegar una plataforma web transaccional
 ## Qué implica para SST360
 
 - La nota evalúa sobre todo la calidad de ingeniería, no la cantidad de módulos. Un módulo bien aislado y validado vale más que tres a medias.
-- La versión para teléfono no aparece en estos requisitos. El frontend calificado es el web, por lo que no debe sacrificarse. Ver [pendientes](11-pendientes.md).
+- La versión para teléfono no aparece en estos requisitos. El frontend calificado es el web, por lo que no debe sacrificarse.

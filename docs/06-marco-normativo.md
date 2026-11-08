@@ -27,6 +27,7 @@ Fuente: texto reformado, publicado en La Gaceta 30,523 del 19 de octubre de 2004
 
 | Art. | Qué exige | Módulo |
 |---|---|---|
+| 9.f | Suministrar gratuitamente a los trabajadores el equipo de protección personal necesario | M8 |
 | 9.j | Llevar un registro de accidentes de trabajo y enfermedades profesionales | M6 |
 | 44 | Facilitar un programa de seguridad y salud en el trabajo | M4, M5 |
 | 46.1.a | Investigar accidentes y enfermedades, determinar su origen y aplicar medidas correctivas | M6 |
@@ -34,16 +35,17 @@ Fuente: texto reformado, publicado en La Gaceta 30,523 del 19 de octubre de 2004
 | 46.1.d | Mantener un registro de los accidentes ocurridos | M6 |
 | 46.1.e | Disponer de un plan para eliminar, corregir y controlar los riesgos detectados | M4, M5 |
 | 47.b | Mantener actualizada la evaluación de riesgos y sus sistemas de control | M4 |
+| 47.d | Registrar el equipo de protección personal, su tipo, marca y tiempo de suministro a cada trabajador | M8 |
 | 47.e | Mantener estadísticas de accidentes y enfermedades | M6 |
 | 47.f | Registrar el ausentismo por accidentes y enfermedades | M6 |
-| 47.g | Mantener los resultados de las inspecciones internas | M8 |
+| 47.g | Mantener los resultados de las inspecciones internas | No cubierto en el MVP |
 
 ### Comisión Mixta de Higiene y Seguridad
 
 | Art. | Qué exige | Módulo |
 |---|---|---|
 | 12 | Con 10 o más trabajadores permanentes debe existir una comisión, con igual número de representantes del empleador y de los trabajadores | M2, M7 |
-| 13 | Un centro de trabajo puede tener una o más comisiones, según jornadas, trabajadores o centros | M7 |
+| 13 | Un centro de trabajo puede tener una o más comisiones, según jornadas, trabajadores o centros | M7. SST360 maneja una sola comisión por empresa |
 | 14 | Representantes por parte: 10–49 trabajadores, 1; 50–99, 2; 100–499, 3; 500–999, 4; 1000 o más, 5. Cada uno con su suplente | M2, M7 |
 | 14 | Los suplentes asisten solo en ausencia de los propietarios | M7 |
 | 15 | La comisión se constituye en un máximo de 30 días desde el inicio de operaciones y se registra ante la Secretaría | M7 |
@@ -53,7 +55,7 @@ Fuente: texto reformado, publicado en La Gaceta 30,523 del 19 de octubre de 2004
 | 21 | El periodo de los miembros es de 2 años, con posible reelección | M7 |
 | 23 | Quórum: la mitad más uno | M7 |
 | 24 | Reunión al menos una vez al mes; extraordinaria a solicitud de la mayoría | M7 |
-| 25.b | Visita mensual a las instalaciones; dos miembros por sector | M8 |
+| 25.b | Visita mensual a las instalaciones; dos miembros por sector | No cubierto en el MVP |
 | 25.d | Investigar las causas de accidentes y enfermedades, y proponer medidas de prevención | M6 |
 | 25.f | Informe semestral de actividades a las autoridades de trabajo | M10 |
 | 25.o | Informe anual a la Secretaría en la última quincena de noviembre, con copia al IHSS | M10 |

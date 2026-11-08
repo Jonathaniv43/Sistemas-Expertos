@@ -17,16 +17,16 @@ Las reglas con artículo vienen del reglamento hondureño, explicado en el [marc
 | RN-07 | Un registro solo puede relacionarse con registros de su misma empresa |
 | RN-08 | Una empresa siempre debe tener al menos un Administrador activo |
 
-## Perfil y diagnóstico
+## Perfil y encuesta
 
 | Código | Regla |
 |---|---|
-| RN-09 | Cada empresa pertenece a un solo sector |
-| RN-10 | Sin sector y sin al menos un centro de trabajo no se puede iniciar el diagnóstico |
-| RN-11 | Las preguntas del formulario dependen del sector |
-| RN-12 | Un diagnóstico finalizado no se edita; para actualizarlo se aplica uno nuevo |
-| RN-13 | El porcentaje de cumplimiento se calcula desde las respuestas y no se guarda |
-| RN-14 | Las mismas respuestas siempre producen los mismos resultados |
+| RN-09 | Cada empresa pertenece a un solo rubro |
+| RN-10 | Sin rubro, sin al menos un área y sin cuenta de Google conectada no se puede generar una encuesta |
+| RN-11 | Las categorías de riesgo disponibles dependen del rubro, y las preguntas de la encuesta dependen de las categorías elegidas |
+| RN-12 | Las preguntas de una encuesta generada quedan registradas tal como se enviaron; para cambiarlas se genera una encuesta nueva |
+| RN-13 | Un peligro se sugiere cuando al menos un trabajador da la respuesta que indica exposición. La sugerencia indica el área y cuántos trabajadores la dieron |
+| RN-14 | Las mismas respuestas siempre producen las mismas sugerencias |
 
 ## Riesgos
 
@@ -45,7 +45,7 @@ Las reglas con artículo vienen del reglamento hondureño, explicado en el [marc
 | Código | Regla |
 |---|---|
 | RN-22 | Una tarea necesita responsable activo en la empresa y fecha límite para iniciarse |
-| RN-23 | Cada tarea conserva su origen: riesgo, brecha, hallazgo, accidente, acuerdo de reunión o manual |
+| RN-23 | Cada tarea conserva su origen: riesgo, mantenimiento, accidente, acuerdo de reunión o manual |
 | RN-24 | Solo el responsable de la tarea o el Responsable SST pueden actualizarla |
 | RN-25 | Si la tarea exige evidencia, no se puede completar sin ella |
 
@@ -53,10 +53,10 @@ Las reglas con artículo vienen del reglamento hondureño, explicado en el [marc
 
 | Código | Regla |
 |---|---|
-| RN-26 | Cada evento se clasifica como accidente, incidente o enfermedad profesional |
+| RN-26 | Cada evento se clasifica como accidente, incidente o enfermedad profesional. Una enfermedad profesional se marca como sospechosa o diagnosticada |
 | RN-27 | Cualquier usuario de la empresa puede reportar un evento |
 | RN-28 | Un evento no se cierra sin causas y medidas correctivas registradas (art. 46.1.a) |
-| RN-29 | Un accidente grave genera una alerta y pide programar reunión extraordinaria (art. 32) |
+| RN-29 | Un accidente grave genera una convocatoria a reunión extraordinaria (art. 32) |
 | RN-30 | Los datos de las personas afectadas solo son visibles para el Responsable SST y la comisión |
 | RN-31 | La fecha de registro la fija el servidor; la fecha del evento la indica quien reporta |
 
@@ -75,28 +75,32 @@ Las reglas con artículo vienen del reglamento hondureño, explicado en el [marc
 | RN-40 | Un acta firmada no se puede editar ni borrar; las correcciones se hacen en un acta nueva |
 | RN-41 | Cada firma guarda usuario, fecha y hash del contenido, una huella que permite detectar cambios |
 
-## Inspecciones
+## Gestión del riesgo
 
 | Código | Regla |
 |---|---|
-| RN-42 | La fecha y hora de la inspección las fija el servidor |
-| RN-43 | Un ítem no conforme exige registrar un hallazgo |
-| RN-44 | Cada hallazgo genera una tarea |
-| RN-45 | El código QR no contiene datos de la empresa ni sigue una secuencia adivinable |
-| RN-46 | Una inspección finalizada no se puede editar |
+| RN-42 | Cada equipo tiene un identificador único dentro de la empresa |
+| RN-43 | Cada mantenimiento indica tipo (preventivo o correctivo), responsable y fecha. Uno realizado exige al menos una fotografía |
+| RN-44 | La fecha de registro la fija el servidor, y un mantenimiento realizado no se puede editar |
+| RN-45 | Un equipo cuya próxima fecha de mantenimiento ya pasó se considera vencido |
+| RN-46 | El inventario de EPP se calcula como ingresos menos entregas, y no se guarda |
+| RN-47 | No se puede entregar más EPP del que hay en inventario |
+| RN-48 | Cada entrega de EPP indica trabajador, área o puesto, artículo, cantidad y fecha (art. 47.d) |
 
 ## Documentos y reportes
 
 | Código | Regla |
 |---|---|
-| RN-47 | Un documento generado queda como borrador hasta que el Responsable SST lo apruebe |
-| RN-48 | Una versión aprobada no se puede editar; los cambios crean una versión nueva |
-| RN-49 | Cada documento tiene una sola versión vigente |
-| RN-50 | Los informes usan los datos capturados en el sistema |
+| RN-49 | Un documento generado queda como borrador hasta que el Responsable SST lo apruebe |
+| RN-50 | Una versión aprobada no se puede editar; los cambios crean una versión nueva |
+| RN-51 | Cada documento tiene una sola versión vigente |
+| RN-52 | Los informes usan los datos capturados en el sistema |
 
-## Notificaciones
+## Integración con Google
 
 | Código | Regla |
 |---|---|
-| RN-51 | Cada notificación tiene un destinatario, y solo esa persona la ve |
-| RN-52 | Las notificaciones se generan por eventos del sistema, no manualmente |
+| RN-53 | Cada empresa tiene como máximo una cuenta de Google conectada, y sus credenciales nunca se muestran |
+| RN-54 | Las fechas de tareas, reuniones, mantenimientos, informes y vencimiento de la comisión se crean como eventos en el Google Calendar de la empresa |
+| RN-55 | Si una fecha cambia, su evento se actualiza; si se cancela, el evento se elimina |
+| RN-56 | Si Google no responde, la operación se guarda igual en SST360 y el evento se vuelve a intentar |

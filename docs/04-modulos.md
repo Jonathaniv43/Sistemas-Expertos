@@ -11,7 +11,8 @@ Las historias detalladas de cada módulo están en [historias de usuario](10-his
 - Registrar una empresa e iniciar sesión.
 - Agregar usuarios y asignar roles.
 - Elegir o cambiar de empresa, si el usuario pertenece a varias.
-- Administrar los contenidos comunes de la plataforma.
+- Conectar la cuenta de Google de la empresa, que se usa para las encuestas y el calendario.
+- Administrar los contenidos comunes de la plataforma: rubros, categorías de riesgo, preguntas, peligros y plantillas.
 
 **Se usa en:** web. Iniciar sesión y cambiar de empresa también en teléfono.
 
@@ -19,33 +20,35 @@ Las historias detalladas de cada módulo están en [historias de usuario](10-his
 
 **Propósito:** conocer a la empresa para saber qué le aplica.
 
-- Elegir el sector: oficina administrativa, comercio o tienda, maquila o fábrica, o construcción.
-- Registrar centros de trabajo (cada lugar físico) y sus trabajadores permanentes.
-- Registrar áreas dentro de cada centro.
+- Registrar razón social, RTN, dirección, actividad económica y número de trabajadores permanentes.
+- Elegir el rubro: oficina administrativa, comercio o tienda, maquila o fábrica, o construcción.
+- Registrar las áreas de la empresa.
 - Calcular cuántos representantes necesita la Comisión Mixta.
 
 **Se usa en:** web.
 
 ## M3. Diagnóstico de contexto
 
-**Propósito:** entender a la organización para identificar sus riesgos y medir qué le falta.
+**Propósito:** conocer el contexto de la organización a través de sus trabajadores, para identificar sus riesgos.
 
-Es un solo formulario con preguntas según el sector: actividades, instalaciones, equipos, sustancias, trabajo en alturas, prácticas actuales y documentación existente. Corresponde a la idea de "contexto de la organización" de ISO 45001.
+Cada rubro tiene categorías de riesgo, como trabajo en alturas o alto voltaje, y cada categoría tiene preguntas exploratorias. Rubros, categorías y preguntas se guardan en la base de datos.
 
-Al finalizar, da dos resultados:
+1. El Responsable de SST elige las categorías que quiere explorar. Solo ve las de su rubro.
+2. SST360 reúne las preguntas de esas categorías y agrega una pregunta sobre el área en que trabaja cada persona.
+3. SST360 crea la encuesta en Google Forms, la publica y muestra el enlace para compartirlo con los trabajadores.
+4. Los trabajadores responden en Google Forms.
+5. SST360 importa las respuestas y muestra un resumen por pregunta y por área.
+6. SST360 sugiere peligros. Cada pregunta puede asociarse a un peligro y a la respuesta que indica exposición. Si al menos un trabajador da esa respuesta, el peligro se sugiere en su área, indicando cuántos trabajadores la dieron.
 
-1. **Peligros sugeridos,** que pasan a la matriz de riesgos para que el Responsable de SST los confirme.
-2. **Porcentaje de cumplimiento y brechas.** Una brecha es algo que la norma o la ley piden y la empresa aún no tiene.
+Los peligros sugeridos pasan a la matriz de riesgos, donde el Responsable de SST los confirma. Corresponde a la idea de "contexto de la organización" de ISO 45001.
 
-Los resultados salen de reglas guardadas en un catálogo. Por ejemplo: si la empresa responde que trabaja en alturas, se sugiere el peligro de caída. Cada resultado indica qué respuesta lo originó. El diagnóstico se puede repetir para comparar el avance.
-
-**Se usa en:** web.
+**Se usa en:** web. Los trabajadores responden desde cualquier dispositivo.
 
 ## M4. Matriz de riesgos
 
 **Propósito:** identificar, evaluar y controlar los riesgos de la empresa.
 
-- Revisar los peligros sugeridos y agregar otros.
+- Revisar los peligros sugeridos por la encuesta y agregar otros.
 - Evaluar cada riesgo por probabilidad y severidad para obtener su nivel.
 - Definir controles, de mayor a menor efectividad: eliminar, sustituir, controles de ingeniería, controles administrativos y equipo de protección personal.
 - Volver a evaluar con los controles aplicados, lo que da el riesgo residual.
@@ -59,7 +62,7 @@ Un peligro es lo que puede causar daño, como una escalera en mal estado. El rie
 
 **Propósito:** convertir lo detectado en acciones con dueño y fecha.
 
-- Generar tareas desde riesgos y brechas. Otras tareas llegan de hallazgos, accidentes y acuerdos de reunión.
+- Generar tareas desde los riesgos y sus controles. Otras tareas llegan de mantenimientos, accidentes y acuerdos de reunión.
 - Asignar responsable y fecha.
 - Atender tareas y adjuntar evidencia.
 - Filtrar y ver lo vencido.
@@ -70,11 +73,11 @@ Un peligro es lo que puede causar daño, como una escalera en mal estado. El rie
 
 **Propósito:** registrar lo ocurrido, entender por qué pasó y evitar que se repita.
 
-- Reportar accidentes, incidentes (lo que estuvo a punto de causar daño) y enfermedades profesionales.
-- Registrar a las personas afectadas y los días perdidos.
+- Reportar accidentes, incidentes (lo que estuvo a punto de causar daño) y enfermedades profesionales, sospechosas o diagnosticadas.
+- Registrar a las personas afectadas y sus días de incapacidad.
 - Investigar causas y definir medidas correctivas.
 - Revisar la matriz de riesgos a partir de lo aprendido.
-- Consultar estadísticas.
+- Consultar estadísticas de siniestralidad y ausentismo.
 
 **Se usa en:** teléfono y web para reportar. Web para investigar y consultar.
 
@@ -82,7 +85,7 @@ Un peligro es lo que puede causar daño, como una escalera en mal estado. El rie
 
 **Propósito:** gestionar lo que la ley exige a la Comisión Mixta de Higiene y Seguridad.
 
-- Registrar la comisión y sus integrantes, con su periodo de 2 años.
+- Registrar la comisión, su acta de constitución y sus integrantes, con su periodo de 2 años.
 - Programar reuniones ordinarias y extraordinarias.
 - Registrar asistencia y verificar quórum.
 - Redactar, aprobar y firmar actas.
@@ -90,17 +93,26 @@ Un peligro es lo que puede causar daño, como una escalera en mal estado. El rie
 
 **Se usa en:** web. Firmar actas también en teléfono.
 
-## M8. Inspecciones QR
+## M8. Gestión del riesgo
 
-**Propósito:** registrar las inspecciones en el sitio, con evidencia.
+**Propósito:** mantener en buen estado los equipos de la empresa y controlar el equipo de protección personal (EPP).
 
-- Crear puntos de inspección, como un extintor o un tablero eléctrico, con su código QR.
-- Escanear el código y llenar su lista de verificación.
-- Registrar hallazgos con foto, fecha y hora.
-- Generar tareas desde los hallazgos.
-- Controlar las visitas mensuales.
+**Equipos y mantenimiento:**
 
-**Se usa en:** teléfono. Crear puntos y consultar resultados en web.
+- Registrar cada equipo o producto con su identificador, tipo, área y responsable de mantenimiento.
+- Marcar los equipos de emergencia, como extintores o lámparas de emergencia.
+- Programar la próxima fecha de mantenimiento.
+- Registrar mantenimientos preventivos y reparaciones, con fotografías tomadas desde el teléfono.
+- Consultar el historial de cada equipo y los mantenimientos vencidos.
+- Crear tareas de reparación cuando un mantenimiento detecta un problema.
+
+**Equipo de protección personal:**
+
+- Registrar los artículos de EPP y los ingresos al inventario.
+- Registrar las entregas a cada trabajador, indicando su área o puesto.
+- Consultar el inventario disponible y las entregas por área, puesto y periodo.
+
+**Se usa en:** teléfono para registrar mantenimientos. Web para lo demás.
 
 ## M9. Políticas y procedimientos
 
@@ -115,36 +127,54 @@ Un peligro es lo que puede causar daño, como una escalera en mal estado. El rie
 
 ## M10. Reportes
 
-**Propósito:** generar documentos oficiales con los datos ya capturados.
+**Propósito:** generar documentos con los datos ya capturados.
 
-- Informe semestral a las autoridades de trabajo.
-- Informe anual a la Secretaría de Trabajo, con copia al Instituto Hondureño de Seguridad Social (IHSS).
-- Actas firmadas en PDF.
-- Historial de informes generados.
+| Reporte | Contenido |
+|---|---|
+| Matriz de riesgos | Riesgos por área, evaluación inicial y residual, y controles |
+| Políticas | Políticas y procedimientos vigentes |
+| Informe semestral | Actividades del semestre para las autoridades de trabajo |
+| Informe anual | Informe para la Secretaría de Trabajo, con copia al Instituto Hondureño de Seguridad Social (IHSS) |
+| Actas firmadas | Cada acta firmada en PDF |
+| Historial | Todos los informes generados |
+
+**Contenido del informe anual:**
+
+| Sección | Qué incluye | De dónde salen los datos |
+|---|---|---|
+| Datos de la empresa | Razón social, RTN, dirección, actividad económica y número de trabajadores | M2 |
+| Comisión de Seguridad e Higiene | Acta de constitución, integración y funciones de la Comisión Mixta | M7 |
+| Estadísticas de siniestralidad | Accidentes de trabajo del periodo, enfermedades profesionales diagnosticadas o sospechosas, días de incapacidad y ausentismo | M6 |
+| Gestión de prevención | Identificación de peligros, evaluación de riesgos, y mantenimiento de instalaciones y equipos de emergencia | M4, M8 |
+| Equipo de protección personal | Inventario y entregas por área o puesto | M8 |
+| Plan de acción y mejoras | Objetivos cumplidos durante el año, y retos o medidas correctivas para el siguiente periodo | M5, más el texto que redacta el Responsable SST |
 
 **Se usa en:** web.
 
 ## M11. Notificaciones
 
-**Propósito:** avisar a cada persona lo que debe atender.
+**Propósito:** que nadie olvide una fecha importante.
 
-- Tareas asignadas y próximas a vencer.
-- Reuniones convocadas.
-- Informes y obligaciones próximas.
-- Accidentes graves.
-- Documentos por aprobar y actas por firmar.
+SST360 usa Google Calendar con la cuenta conectada por la empresa. Crea un evento, e invita a las personas que corresponde, para:
 
-Llegan dentro de la aplicación y por correo electrónico.
+- La fecha límite de cada tarea.
+- Cada reunión de la comisión.
+- Cada mantenimiento programado.
+- Los informes semestral y anual.
+- El vencimiento del periodo de la comisión.
+- La reunión extraordinaria después de un accidente grave.
 
-**Se usa en:** teléfono y web.
+Si una fecha cambia, el evento se actualiza; si se cancela, se elimina. Los recordatorios los envía Google Calendar, también en el teléfono.
+
+**Se usa en:** web y teléfono, a través de Google Calendar.
 
 ## M12. Panel de avance
 
 **Propósito:** mostrar de un vistazo cómo va la empresa.
 
-- Porcentaje de cumplimiento.
-- Riesgos por nivel.
+- Riesgos por nivel y riesgos altos sin control.
 - Tareas pendientes y vencidas.
+- Mantenimientos vencidos e inventario de EPP.
 - Obligaciones del mes.
 - Documentación lista para una auditoría.
 

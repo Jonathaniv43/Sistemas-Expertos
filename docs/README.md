@@ -1,7 +1,7 @@
 # Documentación de SST360
 
 **Estado:** propuesta para aprobación del equipo
-**Fecha:** 5 de noviembre de 2026
+**Fecha:** 7 de noviembre de 2026
 
 SST360 es el proyecto final de la clase de Sistemas Expertos (UNAH, III PAC 2026). Es una plataforma para que las empresas hondureñas gestionen la seguridad y salud de sus trabajadores.
 
@@ -9,9 +9,9 @@ SST360 es el proyecto final de la clase de Sistemas Expertos (UNAH, III PAC 2026
 
 1. [Visión del producto](01-vision-producto.md): qué vamos a construir y para quién.
 2. [Alcance](03-alcance.md): qué entra, qué no y en qué orden se construye.
-3. [Pendientes](11-pendientes.md): qué falta decidir.
+3. [Módulos](04-modulos.md): qué hace cada parte del sistema.
 
-Si una palabra no te resulta conocida, búscala en el [glosario](12-glosario.md).
+Si una palabra no te resulta conocida, búscala en el [glosario](11-glosario.md).
 
 ## Todos los archivos
 
@@ -27,8 +27,8 @@ Si una palabra no te resulta conocida, búscala en el [glosario](12-glosario.md)
 | [08-decisiones-bd.md](08-decisiones-bd.md) | Decisiones que definen la base de datos | Quien diseñe la base de datos |
 | [09-entidades.md](09-entidades.md) | Datos principales que guardará el sistema | Quien diseñe la base de datos |
 | [10-historias-usuario.md](10-historias-usuario.md) | Todo el trabajo, historia por historia | Todos |
-| [11-pendientes.md](11-pendientes.md) | Dudas abiertas y con quién resolverlas | Todos |
-| [12-glosario.md](12-glosario.md) | Significado de términos y siglas | Consulta |
+| [11-glosario.md](11-glosario.md) | Significado de términos y siglas | Consulta |
+| [12-modelo-datos.md](12-modelo-datos.md) | Tablas, columnas, relaciones, restricciones e índices | Quien diseñe o programe |
 
 ## Lo que el equipo debe aprobar
 
@@ -38,4 +38,4 @@ Si una palabra no te resulta conocida, búscala en el [glosario](12-glosario.md)
 
 ## Siguiente paso
 
-Con esto aprobado sigue el diseño de la base de datos. Las historias HU-DIS-08 a HU-DIS-11 de [historias de usuario](10-historias-usuario.md) describen ese trabajo.
+El [modelo de datos](12-modelo-datos.md) es la propuesta para las historias HU-DIS-08 a HU-DIS-11 de [historias de usuario](10-historias-usuario.md). El equipo debe revisarlo antes de pasarlo a EF Core.

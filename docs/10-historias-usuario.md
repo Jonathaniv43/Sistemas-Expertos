@@ -56,9 +56,10 @@ Cada historia termina con estos datos:
 - Se documentan seguridad, aislamiento entre empresas, auditoría y mantenibilidad.
 - Rendimiento y disponibilidad consideran que el servidor gratuito se suspende.
 - Se define el tamaño máximo de archivos.
+- Se documentan las dependencias de Google: cuenta, permisos y límites de uso.
 - Se documentan las restricciones del curso.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** D15
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** D14, D16
 
 ### HU-DIS-04 | Validar las reglas de negocio
 
@@ -101,12 +102,14 @@ Cada historia termina con estos datos:
 
 **Criterios de aceptación:**
 
-- Se documenta registro, inicio de sesión y cambio de empresa.
-- Se documenta diagnóstico → matriz de riesgos → plan de trabajo.
+- Se documenta registro, inicio de sesión, cambio de empresa y conexión con Google.
+- Se documenta categorías → encuesta en Google Forms → respuestas → peligros sugeridos → matriz de riesgos → plan de trabajo.
 - Se documenta accidente → investigación → medidas → revisión de la matriz.
 - Se documenta reunión → acta → aprobación → firma.
-- Se documenta inspección → hallazgo → tarea.
+- Se documenta mantenimiento con fotos → tarea de reparación.
+- Se documenta ingreso de EPP → entrega → inventario.
 - Se documenta plantilla → borrador → aprobación → versión vigente.
+- Se documenta fecha en SST360 → evento en Google Calendar → actualización o eliminación.
 - Cada flujo indica inicio, resultado, alternativas y errores.
 
 **Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-02 · **Reglas:** ninguna
@@ -121,7 +124,7 @@ Cada historia termina con estos datos:
 - Se indican los atributos obligatorios y opcionales.
 - Cada entidad se clasifica como raíz, global o con `EmpresaId`.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** D1 a D16
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** D1 a D18
 
 ### HU-DIS-09 | Definir el aislamiento multiempresa
 
@@ -134,7 +137,7 @@ Cada historia termina con estos datos:
 - Se define cómo se obtiene la empresa activa.
 - Se documenta cómo se impiden las referencias entre empresas.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-08 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D1, D7, D16
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-08 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D1, D7, D15
 
 ### HU-DIS-10 | Diseñar el diagrama entidad-relación
 
@@ -148,7 +151,7 @@ Cada historia termina con estos datos:
 - Las decisiones de normalización quedan documentadas.
 - Cada tabla existe en el diccionario de datos.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-08, HU-DIS-09 · **Reglas:** D1 a D16
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-08, HU-DIS-09 · **Reglas:** D1 a D18
 
 ### HU-DIS-11 | Definir restricciones e índices
 
@@ -160,7 +163,7 @@ Cada historia termina con estos datos:
 - Se documentan las reglas de eliminación y actualización.
 - Se identifican índices frecuentes, incluido `EmpresaId`.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-10 · **Reglas:** D16
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-10 · **Reglas:** D15
 
 ### HU-DIS-12 | Definir los contratos de la API
 
@@ -311,15 +314,17 @@ Cada historia termina con estos datos:
 
 ### HU-M01-07 | Administrar los catálogos
 
-**Como** Administrador de plataforma, **quiero** mantener sectores, requisitos, preguntas, reglas, peligros y plantillas, **para** actualizar el contenido sin programar.
+**Como** Administrador de plataforma, **quiero** mantener rubros, categorías de riesgo, preguntas exploratorias, peligros y plantillas, **para** actualizar el contenido sin programar.
 
 **Criterios de aceptación:**
 
 - Puedo crear, editar y desactivar elementos.
-- Los cambios no alteran diagnósticos ya realizados.
+- Cada categoría pertenece a un rubro, y cada pregunta a una categoría.
+- Puedo asociar una pregunta a un peligro y a la respuesta que indica exposición.
+- Los cambios no alteran encuestas ya generadas.
 - Otros roles reciben 403.
 
-**Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-TEC-07 · **Reglas:** D7
+**Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-TEC-07 · **Reglas:** RN-12, D7
 
 ### HU-M01-08 | Consultar las empresas registradas
 
@@ -327,10 +332,24 @@ Cada historia termina con estos datos:
 
 **Criterios de aceptación:**
 
-- Veo nombre, sector, fecha de registro y número de usuarios.
+- Veo nombre, rubro, fecha de registro y número de usuarios.
 - No veo su información de SST.
 
 **Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M01-01 · **Reglas:** RN-05
+
+### HU-M01-09 | Conectar la cuenta de Google
+
+**Como** Administrador de empresa, **quiero** conectar la cuenta de Google de la empresa, **para** generar encuestas y usar el calendario.
+
+**Criterios de aceptación:**
+
+- Autorizo el acceso desde SST360 con la cuenta de Google de la empresa.
+- La empresa tiene como máximo una cuenta conectada.
+- Puedo desconectarla y conectar otra.
+- Sin cuenta conectada, SST360 indica que no se pueden generar encuestas ni eventos.
+- Las credenciales nunca se muestran.
+
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-05, HU-TEC-23 · **Reglas:** RN-53, D16
 
 ---
 
@@ -338,39 +357,30 @@ Cada historia termina con estos datos:
 
 ### HU-M02-01 | Completar el perfil
 
-**Como** Administrador de empresa, **quiero** registrar sector y datos generales, **para** que la plataforma sepa qué me aplica.
+**Como** Administrador de empresa, **quiero** registrar los datos de mi empresa y su rubro, **para** que la plataforma sepa qué me aplica y pueda generar los informes.
 
 **Criterios de aceptación:**
 
-- Elijo uno de los 4 sectores.
-- Puedo actualizar los datos generales.
+- Registro razón social, RTN, dirección, actividad económica y número de trabajadores permanentes.
+- Elijo uno de los 4 rubros.
+- El RTN no puede repetirse entre empresas.
+- Puedo actualizar los datos.
 
-**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-01, HU-TEC-07 · **Reglas:** RN-09, D7
+**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-01, HU-TEC-07 · **Reglas:** RN-01, RN-09, D5, D7
 
-### HU-M02-02 | Registrar centros de trabajo
+### HU-M02-02 | Registrar áreas
 
-**Como** Administrador de empresa, **quiero** registrar mis centros de trabajo, **para** organizar la gestión por lugar.
-
-**Criterios de aceptación:**
-
-- Cada centro tiene nombre, dirección y trabajadores permanentes.
-- La empresa puede tener varios centros.
-- Un centro con registros asociados se desactiva, no se borra.
-
-**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01 · **Reglas:** art. 13, D4, D5
-
-### HU-M02-03 | Registrar áreas
-
-**Como** Administrador de empresa, **quiero** registrar las áreas de cada centro, **para** ubicar riesgos, puntos de inspección y responsables.
+**Como** Administrador de empresa, **quiero** registrar las áreas de mi empresa, **para** ubicar riesgos, equipos y responsables.
 
 **Criterios de aceptación:**
 
-- Cada área pertenece a un centro de mi empresa.
+- Cada área pertenece a mi empresa.
 - Puedo asignar un Encargado de área.
+- Un área con registros asociados se desactiva, no se borra.
 
-**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** RN-07, D3, D4
+**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01 · **Reglas:** RN-07, D3, D4
 
-### HU-M02-04 | Calcular la composición de la comisión
+### HU-M02-03 | Calcular la composición de la comisión
 
 **Como** Responsable SST, **quiero** saber cuántos representantes necesita la comisión, **para** cumplir la ley.
 
@@ -378,75 +388,88 @@ Cada historia termina con estos datos:
 
 - Con 10 y 49 trabajadores indica 1 representante por parte.
 - Con 50 y 99 indica 2; con 100 y 499, 3; con 500 y 999, 4; con 1000, 5.
-- El resultado se calcula y no se guarda.
+- El resultado se calcula con los trabajadores permanentes de la empresa y no se guarda.
 - Si cambia el número de trabajadores, recuerda comunicarlo a la Secretaría de Trabajo.
 
-**Módulo:** M2 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** arts. 12, 14, 17, RN-32
+**Módulo:** M2 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01 · **Reglas:** arts. 12, 14, 17, RN-32
 
 ---
 
 ## M3. Diagnóstico de contexto
 
-### HU-M03-01 | Responder el formulario de contexto
+### HU-M03-01 | Elegir categorías de riesgo
 
-**Como** Responsable SST, **quiero** responder un formulario sobre mi organización, **para** identificar sus riesgos y qué le falta.
-
-**Criterios de aceptación:**
-
-- Las preguntas dependen del sector.
-- Cubre actividades, instalaciones, equipos, sustancias, prácticas y documentación.
-- Puedo guardar el avance y continuar después.
-- No puedo finalizar con preguntas obligatorias sin responder.
-- Finalizado, no se puede editar.
-
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-03, HU-TEC-07 · **Reglas:** RN-10, RN-11, RN-12, D8
-
-### HU-M03-02 | Obtener peligros sugeridos
-
-**Como** Responsable SST, **quiero** que el sistema sugiera peligros según mis respuestas, **para** no empezar desde cero.
+**Como** Responsable SST, **quiero** elegir las categorías de riesgo que quiero explorar, **para** que la encuesta pregunte lo que aplica a mi empresa.
 
 **Criterios de aceptación:**
 
-- Al finalizar, las reglas del catálogo generan los peligros sugeridos.
-- Cada sugerencia indica qué respuesta la originó.
-- Las mismas respuestas producen los mismos peligros.
-- Agregar una regla al catálogo cambia los resultados sin modificar código.
+- Solo veo las categorías del rubro de mi empresa.
+- Puedo elegir una o varias categorías.
+- Antes de generar la encuesta veo las preguntas que incluirá.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-01 · **Reglas:** art. 46.1.b, RN-14, D7, D9
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02, HU-TEC-07 · **Reglas:** RN-09, RN-11, D7
 
-### HU-M03-03 | Conocer mis brechas
+### HU-M03-02 | Generar la encuesta en Google Forms
 
-**Como** Responsable SST, **quiero** ver qué requisitos me faltan, **para** saber qué debo resolver.
-
-**Criterios de aceptación:**
-
-- Al finalizar se generan las brechas.
-- Cada brecha indica el requisito y la respuesta que la originó.
-
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-01 · **Reglas:** RN-14, D8
-
-### HU-M03-04 | Ver mi porcentaje de cumplimiento
-
-**Como** Responsable SST, **quiero** ver mi porcentaje de cumplimiento, **para** medir qué tan preparada está la empresa.
+**Como** Responsable SST, **quiero** generar la encuesta con un clic, **para** compartirla con los trabajadores sin armarla a mano.
 
 **Criterios de aceptación:**
 
-- Veo el porcentaje total y por grupo de requisitos.
-- Se calcula desde las respuestas y no se guarda.
-- La fórmula está documentada.
+- La encuesta se crea en la cuenta de Google de la empresa con las preguntas de las categorías elegidas.
+- Incluye una pregunta sobre el área, con las áreas de la empresa como opciones.
+- Queda publicada, y SST360 muestra su enlace para compartirlo.
+- Se registran categorías, preguntas, fecha y autor.
+- Si Google falla, se informa el error y no queda una encuesta a medias.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-03 · **Reglas:** RN-13
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-01, HU-M01-09 · **Reglas:** RN-10, RN-12, D8, D16
 
-### HU-M03-05 | Repetir el diagnóstico
+### HU-M03-03 | Importar las respuestas
 
-**Como** Responsable SST, **quiero** repetir el diagnóstico y comparar, **para** comprobar el avance.
+**Como** Responsable SST, **quiero** traer las respuestas de la encuesta, **para** analizarlas en SST360.
 
 **Criterios de aceptación:**
 
-- Cada aplicación queda como registro propio, con su fecha.
-- Puedo comparar dos aplicaciones.
+- Puedo importar las respuestas cuando quiera.
+- Importar de nuevo trae solo las respuestas nuevas, sin duplicar.
+- Veo cuántas respuestas tiene la encuesta y la fecha de la última importación.
 
-**Módulo:** M3 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M03-04 · **Reglas:** RN-12, D8
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-02 · **Reglas:** D8, D16
+
+### HU-M03-04 | Ver el resumen de respuestas
+
+**Como** Responsable SST, **quiero** ver un resumen de las respuestas, **para** entender la situación de cada área.
+
+**Criterios de aceptación:**
+
+- Veo, por pregunta, cuántos trabajadores dieron cada respuesta.
+- Puedo filtrar el resumen por área.
+
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-03 · **Reglas:** ninguna
+
+### HU-M03-05 | Obtener peligros sugeridos
+
+**Como** Responsable SST, **quiero** que el sistema sugiera peligros a partir de las respuestas, **para** construir la matriz sin empezar de cero.
+
+**Criterios de aceptación:**
+
+- Si al menos un trabajador da la respuesta que indica exposición, se sugiere el peligro asociado en su área.
+- Cada sugerencia indica la pregunta que la originó y cuántos trabajadores dieron esa respuesta.
+- Las mismas respuestas producen las mismas sugerencias.
+- Importar nuevas respuestas actualiza las sugerencias sin duplicarlas.
+- Asociar un peligro a otra pregunta del catálogo cambia los resultados sin modificar código.
+
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-03 · **Reglas:** art. 46.1.b, RN-13, RN-14, D9
+
+### HU-M03-06 | Consultar encuestas anteriores
+
+**Como** Responsable SST, **quiero** ver las encuestas anteriores, **para** comparar cómo cambian los resultados.
+
+**Criterios de aceptación:**
+
+- Veo cada encuesta con su fecha, categorías y número de respuestas.
+- Puedo abrir el resumen y las sugerencias de cada una.
+
+**Módulo:** M3 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M03-05 · **Reglas:** RN-12, D8
 
 ---
 
@@ -454,15 +477,15 @@ Cada historia termina con estos datos:
 
 ### HU-M04-01 | Confirmar los peligros sugeridos
 
-**Como** Responsable SST, **quiero** revisar los peligros sugeridos, **para** dejar en la matriz solo los que aplican.
+**Como** Responsable SST, **quiero** revisar los peligros sugeridos por la encuesta, **para** dejar en la matriz solo los que aplican.
 
 **Criterios de aceptación:**
 
 - Puedo confirmar o descartar cada sugerencia.
-- Al confirmar, indico el área y se crea el riesgo.
+- Al confirmar se crea el riesgo en el área sugerida, que puedo cambiar.
 - Un peligro sin confirmar no aparece en la matriz.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-02 · **Reglas:** RN-17, RN-18, D9
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-05 · **Reglas:** RN-17, RN-18, D9
 
 ### HU-M04-02 | Agregar riesgos
 
@@ -473,7 +496,7 @@ Cada historia termina con estos datos:
 - Elijo un peligro del catálogo o lo describo.
 - Indico el área y la actividad relacionada.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-03 · **Reglas:** RN-17, D9
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** RN-17, D9
 
 ### HU-M04-03 | Evaluar un riesgo
 
@@ -539,16 +562,16 @@ Cada historia termina con estos datos:
 
 ### HU-M05-01 | Generar el plan
 
-**Como** Responsable SST, **quiero** convertir riesgos y brechas en tareas, **para** saber qué hacer y en qué orden.
+**Como** Responsable SST, **quiero** convertir los riesgos y sus controles en tareas, **para** saber qué hacer y en qué orden.
 
 **Criterios de aceptación:**
 
-- Riesgos, controles y brechas producen tareas según las plantillas.
+- Riesgos y controles producen tareas según las plantillas.
 - Las tareas se ordenan por prioridad, empezando por los riesgos más altos.
 - Puedo revisar el plan antes de confirmarlo.
 - Generarlo dos veces no duplica tareas.
 
-**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-03, HU-M04-05 · **Reglas:** art. 46.1.e, RN-23, D6
+**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-05 · **Reglas:** art. 46.1.e, RN-23, D6
 
 ### HU-M05-02 | Asignar tareas
 
@@ -585,7 +608,7 @@ Cada historia termina con estos datos:
 - Solo usuarios de mi empresa pueden verlo.
 - Si la tarea exige evidencia, no se completa sin ella.
 
-**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M05-03, HU-TEC-10 · **Reglas:** RN-05, RN-25, D15
+**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M05-03, HU-TEC-10 · **Reglas:** RN-05, RN-25, D14
 
 ### HU-M05-05 | Filtrar el plan
 
@@ -609,11 +632,13 @@ Cada historia termina con estos datos:
 **Criterios de aceptación:**
 
 - Indico tipo, fecha, hora, área y descripción.
+- Una enfermedad profesional se marca como sospechosa o diagnosticada.
+- Puedo indicar si el accidente es grave.
 - Puedo adjuntar fotos.
 - El sistema registra quién reporta y cuándo.
 - Cualquier usuario de la empresa puede reportar.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M02-03, HU-TEC-10, HU-TEC-15 · **Reglas:** arts. 9.j, 46.1.d, RN-26, RN-27, RN-31
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M02-02, HU-TEC-10, HU-TEC-15 · **Reglas:** arts. 9.j, 46.1.d, RN-26, RN-27, RN-31
 
 ### HU-M06-02 | Registrar a las personas afectadas
 
@@ -621,7 +646,7 @@ Cada historia termina con estos datos:
 
 **Criterios de aceptación:**
 
-- Registro nombre, puesto, tipo de lesión y días perdidos.
+- Registro nombre, puesto, tipo de lesión y días de incapacidad.
 - La persona no necesita tener cuenta.
 - Solo el Responsable SST y la comisión ven estos datos.
 
@@ -668,7 +693,7 @@ Cada historia termina con estos datos:
 **Criterios de aceptación:**
 
 - Veo eventos por tipo, área y periodo.
-- Veo días perdidos por periodo.
+- Veo días de incapacidad y ausentismo por periodo.
 - Las cifras se calculan y no muestran datos personales.
 
 **Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M06-02 · **Reglas:** arts. 47.e, 47.f, RN-30
@@ -679,15 +704,16 @@ Cada historia termina con estos datos:
 
 ### HU-M07-01 | Constituir la comisión
 
-**Como** Responsable SST, **quiero** registrar la comisión de un centro, **para** gestionarla en la plataforma.
+**Como** Responsable SST, **quiero** registrar la comisión de la empresa, **para** gestionarla en la plataforma.
 
 **Criterios de aceptación:**
 
 - Registro la fecha de constitución y los datos de registro ante la Secretaría.
-- Un centro tiene una sola comisión activa.
+- Adjunto el acta de constitución.
+- La empresa tiene una sola comisión activa.
 - Se advierte si pasaron más de 30 días desde el inicio de operaciones.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-04 · **Reglas:** arts. 12, 13, 15, D4
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-03, HU-TEC-10 · **Reglas:** arts. 12, 15, D4, D14
 
 ### HU-M07-02 | Registrar los integrantes
 
@@ -788,76 +814,102 @@ Cada historia termina con estos datos:
 
 ---
 
-## M8. Inspecciones QR
+## M8. Gestión del riesgo
 
-### HU-M08-01 | Crear puntos de inspección
+### HU-M08-01 | Registrar equipos
 
-**Como** Responsable SST, **quiero** crear puntos con su QR, **para** inspeccionar extintores, tableros y otros elementos.
-
-**Criterios de aceptación:**
-
-- Cada punto indica nombre, tipo, área y checklist.
-- El sistema genera un QR imprimible.
-
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-03, HU-TEC-07 · **Reglas:** RN-45, D7
-
-### HU-M08-02 | Escanear un punto
-
-**Como** Colaborador, **quiero** escanear el QR, **para** abrir la inspección sin buscar el punto.
+**Como** Responsable SST, **quiero** registrar los equipos y productos de la empresa, **para** controlar su mantenimiento.
 
 **Criterios de aceptación:**
 
-- El teléfono lee el código y abre el punto.
-- Sin sesión, me pide iniciarla y regreso al punto.
-- Un punto de otra empresa responde como si no existiera.
+- Cada equipo tiene identificador, nombre, tipo, área y responsable de mantenimiento.
+- El identificador no puede repetirse dentro de la empresa.
+- Puedo marcar un equipo como equipo de emergencia.
+- Puedo indicar la próxima fecha de mantenimiento.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-M08-01, HU-TEC-15 · **Reglas:** RN-05
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** RN-42, D17
 
-### HU-M08-03 | Llenar el checklist
+### HU-M08-02 | Registrar un mantenimiento o reparación
 
-**Como** Colaborador, **quiero** llenar el checklist, **para** registrar el estado del punto.
-
-**Criterios de aceptación:**
-
-- Respondo cada ítem como conforme, no conforme o no aplica.
-- La fecha y hora las fija el servidor.
-- Finalizada, la inspección no se puede editar.
-
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-M08-02 · **Reglas:** arts. 25.b, 47.g, RN-42, RN-46
-
-### HU-M08-04 | Registrar un hallazgo con foto
-
-**Como** Colaborador, **quiero** registrar un hallazgo con foto, **para** dejar evidencia.
+**Como** responsable de mantenimiento, **quiero** registrar el trabajo desde el teléfono, **para** dejar constancia con fotografías.
 
 **Criterios de aceptación:**
 
-- Puedo tomar la foto con el teléfono.
-- Un ítem no conforme exige un hallazgo.
-- El hallazgo indica descripción, severidad, fecha y hora.
+- Elijo el equipo por su identificador.
+- Indico si es preventivo o correctivo, y describo lo realizado.
+- Tomo una o varias fotografías con el teléfono.
+- No se puede marcar como realizado sin al menos una fotografía.
+- La fecha de registro la fija el servidor, y un mantenimiento realizado no se edita.
+- Al registrar un preventivo puedo programar la siguiente fecha.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-M08-03, HU-TEC-10 · **Reglas:** RN-43, D15
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M08-01, HU-TEC-10, HU-TEC-15 · **Reglas:** RN-43, RN-44, D14, D17
 
-### HU-M08-05 | Generar una tarea desde el hallazgo
+### HU-M08-03 | Consultar el historial de un equipo
 
-**Como** Responsable SST, **quiero** que cada hallazgo genere una tarea, **para** corregirlo.
-
-**Criterios de aceptación:**
-
-- Cada hallazgo crea una tarea con origen "hallazgo".
-- Al completar la tarea, el hallazgo se muestra como corregido.
-
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-04, HU-M05-02 · **Reglas:** RN-23, RN-44, D6
-
-### HU-M08-06 | Controlar las visitas mensuales
-
-**Como** Responsable SST, **quiero** ver qué áreas no se visitaron este mes, **para** cumplir las visitas de la comisión.
+**Como** Responsable SST, **quiero** ver el historial de cada equipo, **para** demostrar su mantenimiento.
 
 **Criterios de aceptación:**
 
-- Veo las áreas con y sin visita en el mes.
-- Cada visita de comisión registra a sus dos miembros por sector.
+- Veo todos los mantenimientos y reparaciones con fecha, responsable y fotografías.
+- Puedo filtrar por tipo y periodo.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M08-03, HU-M07-02 · **Reglas:** art. 25.b
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-02 · **Reglas:** D17
+
+### HU-M08-04 | Ver los mantenimientos vencidos
+
+**Como** Responsable SST, **quiero** ver qué equipos tienen el mantenimiento vencido, **para** atenderlos primero.
+
+**Criterios de aceptación:**
+
+- Veo los equipos cuya próxima fecha ya pasó.
+- Los equipos de emergencia se distinguen claramente.
+
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M08-01 · **Reglas:** RN-45
+
+### HU-M08-05 | Crear una tarea de reparación
+
+**Como** responsable de mantenimiento, **quiero** crear una tarea cuando detecto un problema, **para** que se repare.
+
+**Criterios de aceptación:**
+
+- La tarea queda con origen "mantenimiento" y referencia al equipo.
+- Desde el equipo veo sus tareas abiertas.
+
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M08-02, HU-M05-02 · **Reglas:** RN-23, D6
+
+### HU-M08-06 | Registrar artículos e ingresos de EPP
+
+**Como** Responsable SST, **quiero** registrar el equipo de protección personal que compra la empresa, **para** llevar su inventario.
+
+**Criterios de aceptación:**
+
+- Cada artículo tiene nombre, tipo y marca.
+- Registro cada ingreso con cantidad y fecha.
+
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** arts. 9.f, 47.d, D18
+
+### HU-M08-07 | Registrar entregas de EPP
+
+**Como** Responsable SST, **quiero** registrar cada entrega de EPP, **para** saber qué recibió cada trabajador.
+
+**Criterios de aceptación:**
+
+- Indico trabajador, área o puesto, artículo, cantidad y fecha.
+- El trabajador no necesita cuenta en SST360.
+- No puedo entregar más de lo que hay en inventario.
+
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-06 · **Reglas:** art. 47.d, RN-47, RN-48, D18
+
+### HU-M08-08 | Consultar inventario y entregas de EPP
+
+**Como** Responsable SST, **quiero** consultar el inventario y las entregas, **para** saber qué hay disponible y qué se ha entregado.
+
+**Criterios de aceptación:**
+
+- Veo el inventario de cada artículo, calculado a partir de ingresos y entregas.
+- Veo las entregas por área, puesto y periodo.
+
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-07 · **Reglas:** RN-46, D18
 
 ---
 
@@ -869,13 +921,13 @@ Cada historia termina con estos datos:
 
 **Criterios de aceptación:**
 
-- Veo las plantillas disponibles para mi sector.
+- Veo las plantillas disponibles para mi rubro.
 - El documento se llena con los datos de la empresa.
 - Incluye al menos la política de SST y el procedimiento de investigación de accidentes.
 - Queda como borrador.
 - Se avisa que la empresa debe revisar el contenido.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01, HU-TEC-07 · **Reglas:** RN-47, D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01, HU-TEC-07 · **Reglas:** RN-49, D13
 
 ### HU-M09-02 | Editar el borrador
 
@@ -898,7 +950,7 @@ Cada historia termina con estos datos:
 - Una versión aprobada no se puede editar.
 - Cada documento tiene una sola versión vigente.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M09-02 · **Reglas:** RN-48, RN-49, D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M09-02 · **Reglas:** RN-50, RN-51, D13
 
 ### HU-M09-04 | Crear una versión nueva
 
@@ -909,7 +961,7 @@ Cada historia termina con estos datos:
 - La versión nueva parte de la vigente y queda como borrador.
 - Las versiones anteriores siguen disponibles para consulta.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M09-03 · **Reglas:** RN-48, D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M09-03 · **Reglas:** RN-50, D13
 
 ### HU-M09-05 | Consultar los documentos vigentes
 
@@ -926,32 +978,59 @@ Cada historia termina con estos datos:
 
 ## M10. Reportes
 
-### HU-M10-01 | Generar el informe semestral
+### HU-M10-01 | Generar la matriz de riesgos en PDF
+
+**Como** Responsable SST, **quiero** descargar la matriz de riesgos, **para** presentarla en una auditoría o inspección.
+
+**Criterios de aceptación:**
+
+- Incluye los riesgos por área, con evaluación inicial, residual y controles.
+- Indica la fecha de generación.
+
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-04 · **Reglas:** art. 47.b, RN-52
+
+### HU-M10-02 | Generar las políticas en PDF
+
+**Como** Responsable SST, **quiero** descargar las políticas y procedimientos vigentes, **para** presentarlos o compartirlos.
+
+**Criterios de aceptación:**
+
+- Incluye solo las versiones vigentes.
+- Cada documento muestra su versión y fecha de aprobación.
+
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M09-03 · **Reglas:** RN-51
+
+### HU-M10-03 | Generar el informe semestral
 
 **Como** Responsable SST, **quiero** generar el informe semestral en PDF, **para** presentarlo a las autoridades de trabajo.
 
 **Criterios de aceptación:**
 
-- Elijo el semestre y el centro de trabajo.
-- Incluye reuniones, inspecciones, hallazgos, accidentes y tareas del periodo.
+- Elijo el semestre.
+- Incluye reuniones, mantenimientos, accidentes y tareas del periodo.
 - Usa los datos ya capturados.
 - La empresa descarga el PDF y lo presenta.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M06-01, HU-M07-06, HU-M08-03 · **Reglas:** art. 25.f, RN-50
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M06-01, HU-M07-06, HU-M08-02 · **Reglas:** art. 25.f, RN-52
 
-### HU-M10-02 | Generar el informe anual
+### HU-M10-04 | Generar el informe anual
 
-**Como** Responsable SST, **quiero** generar el informe anual en PDF, **para** remitirlo en noviembre a la Secretaría de Trabajo, con copia al IHSS.
+**Como** Responsable SST, **quiero** generar el informe anual en PDF, **para** remitirlo a la Secretaría de Trabajo, con copia al IHSS.
 
 **Criterios de aceptación:**
 
-- Incluye las actividades del año.
-- Recuerda el plazo y la copia al IHSS.
-- Usa los datos ya capturados.
+- **Datos de la empresa:** razón social, RTN, dirección, actividad económica y número de trabajadores.
+- **Comisión de Seguridad e Higiene:** acta de constitución, integración y funciones de la comisión.
+- **Estadísticas de siniestralidad:** accidentes del periodo, enfermedades profesionales diagnosticadas o sospechosas, días de incapacidad y ausentismo.
+- **Gestión de prevención:** identificación de peligros, evaluación de riesgos, y mantenimiento de instalaciones y equipos de emergencia.
+- **Equipo de protección personal:** inventario y entregas por área o puesto.
+- **Plan de acción y mejoras:** objetivos cumplidos durante el año, y retos o medidas correctivas para el siguiente periodo.
+- Los objetivos cumplidos salen de las tareas completadas. Los retos y medidas los redacto antes de generar el informe.
+- El informe recuerda el plazo de la última quincena de noviembre y la copia al IHSS.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M10-01 · **Reglas:** art. 25.o, RN-50
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M10-03, HU-M02-01, HU-M07-02, HU-M06-02, HU-M04-04, HU-M08-03, HU-M08-08 · **Reglas:** art. 25.o, RN-52
 
-### HU-M10-03 | Descargar un acta en PDF
+### HU-M10-05 | Descargar un acta en PDF
 
 **Como** usuario de la empresa, **quiero** descargar un acta firmada, **para** presentarla ante la autoridad.
 
@@ -962,81 +1041,87 @@ Cada historia termina con estos datos:
 
 **Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-06 · **Reglas:** art. 33, D12
 
-### HU-M10-04 | Consultar los informes generados
+### HU-M10-06 | Consultar los informes generados
 
-**Como** Responsable SST, **quiero** ver los informes generados, **para** volver a descargarlos.
+**Como** Responsable SST, **quiero** ver los reportes generados, **para** volver a descargarlos.
 
 **Criterios de aceptación:**
 
 - Veo tipo, periodo, autor y fecha.
-- Puedo descargar cada informe de nuevo.
+- Puedo descargar cada reporte de nuevo.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M10-01 · **Reglas:** ninguna
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M10-03 · **Reglas:** ninguna
 
 ---
 
 ## M11. Notificaciones
 
-### HU-M11-01 | Ver mis notificaciones
+### HU-M11-01 | Llevar las tareas al calendario
 
-**Como** usuario, **quiero** ver mis notificaciones, **para** saber qué debo atender.
-
-**Criterios de aceptación:**
-
-- Veo las notificaciones de la empresa activa, de la más reciente a la más antigua.
-- Puedo marcarlas como leídas.
-- Cada notificación lleva a lo que la originó.
-- Solo veo las mías.
-
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-02 · **Reglas:** RN-51, D14
-
-### HU-M11-02 | Recibir avisos de tareas
-
-**Como** responsable de una tarea, **quiero** recibir avisos, **para** no incumplir la fecha.
+**Como** responsable de una tarea, **quiero** que su fecha límite aparezca en mi calendario, **para** no olvidarla.
 
 **Criterios de aceptación:**
 
-- Recibo un aviso al ser asignado.
-- Recibo otro antes del vencimiento y otro si se vence.
-- Un mismo aviso no se repite.
+- Al asignar una tarea se crea un evento en su fecha límite e invita al responsable.
+- El recordatorio lo envía Google Calendar, también en el teléfono.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M11-01, HU-M05-02 · **Reglas:** RN-52
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-09, HU-M05-02 · **Reglas:** RN-54, D16
 
-### HU-M11-03 | Recibir avisos de obligaciones
+### HU-M11-02 | Llevar las reuniones al calendario
 
-**Como** integrante de la comisión, **quiero** recibir avisos de reuniones, actas e informes, **para** cumplir a tiempo.
-
-**Criterios de aceptación:**
-
-- Recibo un aviso de cada reunión convocada.
-- Recibo un aviso de cada acta por firmar.
-- El Responsable SST recibe avisos de informes próximos, incluido el de noviembre.
-- El Responsable SST recibe un aviso de documentos por aprobar.
-
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M11-01, HU-M07-03 · **Reglas:** arts. 24, 25.f, 25.o, RN-52
-
-### HU-M11-04 | Recibir alerta de accidente grave
-
-**Como** Responsable SST, **quiero** recibir una alerta inmediata, **para** actuar y convocar a la comisión.
+**Como** integrante de la comisión, **quiero** recibir la invitación a cada reunión, **para** asistir.
 
 **Criterios de aceptación:**
 
-- Un accidente grave genera una alerta al Responsable SST y a la comisión.
-- La alerta permite programar una reunión extraordinaria.
+- Al programar una reunión se crea un evento e invita a sus integrantes.
+- El evento indica tipo de reunión, lugar y temas.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M11-01, HU-M06-01 · **Reglas:** art. 32, RN-29, RN-52
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-09, HU-M07-03 · **Reglas:** art. 24, RN-54, D16
 
-### HU-M11-05 | Recibir notificaciones por correo
+### HU-M11-03 | Llevar los mantenimientos al calendario
 
-**Como** usuario, **quiero** recibir notificaciones importantes por correo, **para** enterarme aunque no abra la aplicación.
+**Como** responsable de mantenimiento, **quiero** que el próximo mantenimiento aparezca en mi calendario, **para** hacerlo a tiempo.
 
 **Criterios de aceptación:**
 
-- Las notificaciones importantes también llegan por correo.
-- Un fallo de correo no impide la operación que lo originó.
-- Si no se envía, la notificación sigue visible en la aplicación.
+- Al programar la próxima fecha de un equipo se crea un evento e invita a su responsable.
+- El evento indica el equipo y su identificador.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M11-01 · **Reglas:** D14
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M01-09, HU-M08-01 · **Reglas:** RN-54, D16
+
+### HU-M11-04 | Llevar informes y vencimientos al calendario
+
+**Como** Responsable SST, **quiero** ver en mi calendario los informes y el vencimiento de la comisión, **para** cumplir los plazos.
+
+**Criterios de aceptación:**
+
+- Hay eventos para el informe semestral y para el anual, este en la última quincena de noviembre.
+- Hay un evento para el fin del periodo de la comisión.
+
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M01-09, HU-M07-02 · **Reglas:** arts. 21, 25.f, 25.o, RN-54
+
+### HU-M11-05 | Convocar tras un accidente grave
+
+**Como** Responsable SST, **quiero** que un accidente grave convoque a la comisión, **para** cumplir la reunión extraordinaria.
+
+**Criterios de aceptación:**
+
+- Al registrar un accidente grave se propone una reunión extraordinaria.
+- Al confirmarla se crea el evento e invita a la comisión y al encargado del área.
+
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M06-01, HU-M11-02 · **Reglas:** art. 32, RN-29, RN-54
+
+### HU-M11-06 | Mantener el calendario actualizado
+
+**Como** usuario, **quiero** que el calendario refleje los cambios, **para** no ir a reuniones canceladas ni trabajar con fechas viejas.
+
+**Criterios de aceptación:**
+
+- Si una fecha cambia, su evento se actualiza.
+- Si algo se cancela o se elimina, su evento se elimina.
+- Si Google no responde, el cambio se guarda en SST360 y el evento se vuelve a intentar.
+
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M11-01 · **Reglas:** RN-55, RN-56, D16
 
 ---
 
@@ -1044,26 +1129,26 @@ Cada historia termina con estos datos:
 
 ### HU-M12-01 | Ver el avance general
 
-**Como** Responsable SST, **quiero** ver un panel general, **para** saber qué tan preparada está la empresa.
+**Como** Responsable SST, **quiero** ver un panel general, **para** saber cómo va la empresa.
 
 **Criterios de aceptación:**
 
-- Muestra porcentaje de cumplimiento, tareas pendientes y tareas vencidas.
+- Muestra riesgos por nivel, riesgos altos o críticos sin control, y tareas pendientes y vencidas.
 - Los datos se calculan a partir de los demás módulos.
 - Cada indicador lleva a su detalle.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-04, HU-M05-02 · **Reglas:** RN-13
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-05, HU-M05-02 · **Reglas:** RN-19
 
-### HU-M12-02 | Ver el estado de los riesgos
+### HU-M12-02 | Ver el estado de equipos y EPP
 
-**Como** Responsable SST, **quiero** ver mis riesgos por nivel, **para** priorizar.
+**Como** Responsable SST, **quiero** ver mantenimientos vencidos e inventario de EPP, **para** anticiparme.
 
 **Criterios de aceptación:**
 
-- Muestra el número de riesgos por nivel.
-- Señala los riesgos altos o críticos sin control.
+- Muestra los equipos con mantenimiento vencido, destacando los de emergencia.
+- Muestra el inventario de cada artículo de EPP.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M12-01, HU-M04-05 · **Reglas:** RN-19
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M08-04, HU-M08-08 · **Reglas:** RN-45, RN-46
 
 ### HU-M12-03 | Ver las obligaciones del mes
 
@@ -1071,10 +1156,10 @@ Cada historia termina con estos datos:
 
 **Criterios de aceptación:**
 
-- Muestra la reunión mensual, las visitas y los informes próximos.
+- Muestra la reunión mensual, los mantenimientos programados y los informes próximos.
 - En noviembre destaca el informe anual.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M07-03 · **Reglas:** arts. 24, 25.b, 25.f, 25.o
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M07-03 · **Reglas:** arts. 24, 25.f, 25.o
 
 ### HU-M12-04 | Ver la documentación lista
 
@@ -1082,10 +1167,10 @@ Cada historia termina con estos datos:
 
 **Criterios de aceptación:**
 
-- Muestra documentos vigentes, actas firmadas, informes y evidencias por periodo.
+- Muestra documentos vigentes, actas firmadas, reportes y evidencias por periodo.
 - Señala los periodos sin documentación.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M10-04 · **Reglas:** ninguna
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M10-06 · **Reglas:** ninguna
 
 ---
 
@@ -1126,7 +1211,7 @@ Cada historia termina con estos datos:
 - Al guardar, `EmpresaId` se asigna desde la empresa activa.
 - El uso de `IgnoreQueryFilters` está limitado y justificado.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-02, HU-TEC-04 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D16
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-02, HU-TEC-04 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D15
 
 ### HU-TEC-04 | Implementar autenticación JWT
 
@@ -1167,11 +1252,12 @@ Cada historia termina con estos datos:
 
 ### HU-TEC-07 | Cargar los catálogos iniciales
 
-**Como** equipo, **quiero** cargar sectores, requisitos, preguntas, reglas, peligros y plantillas, **para** que el sistema tenga contenido desde el inicio.
+**Como** equipo, **quiero** cargar rubros, categorías de riesgo, preguntas exploratorias, peligros y plantillas, **para** que el sistema tenga contenido desde el inicio.
 
 **Criterios de aceptación:**
 
-- Cubre los 4 sectores.
+- Cubre los 4 rubros, cada uno con sus categorías y preguntas.
+- Las preguntas que detectan un peligro tienen su peligro y su respuesta de exposición.
 - Repetir la carga no duplica datos.
 - El contenido usa redacción propia y lo revisa alguien con conocimiento de SST.
 
@@ -1187,7 +1273,7 @@ Cada historia termina con estos datos:
 - Referenciar un registro de otra empresa se rechaza.
 - Cambiar `EmpresaId` en la petición no tiene efecto.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-03 · **Reglas:** RN-05, RN-06, RN-07, D16
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-03 · **Reglas:** RN-05, RN-06, RN-07, D15
 
 ### HU-TEC-09 | Registrar la auditoría de acciones
 
@@ -1197,7 +1283,7 @@ Cada historia termina con estos datos:
 
 - Se registran usuario, empresa, acción, entidad y fecha.
 - El registro no se puede editar desde la aplicación.
-- Cubre al menos firmas, aprobaciones, cambios de rol e inspecciones.
+- Cubre al menos firmas, aprobaciones, cambios de rol, mantenimientos y entregas de EPP.
 
 **Módulo:** Técnico · **Entrega:** E3 · **Dónde:** No aplica · **Prioridad:** Should · **Depende de:** HU-TEC-03 · **Reglas:** ninguna
 
@@ -1212,7 +1298,7 @@ Cada historia termina con estos datos:
 - Los archivos sobreviven a un reinicio del backend.
 - Los archivos de una empresa no son accesibles para otra.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-TEC-03 · **Reglas:** RN-05, D15
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-TEC-03 · **Reglas:** RN-05, D14
 
 ### HU-TEC-11 | Crear el frontend web por funcionalidades
 
@@ -1282,7 +1368,7 @@ Cada historia termina con estos datos:
 
 - Usa una etapa de compilación y una de ejecución.
 - La imagen final usa runtime Alpine.
-- La generación de PDF y QR funciona dentro de esa imagen.
+- La generación de PDF funciona dentro de esa imagen.
 
 **Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01 · **Reglas:** ninguna
 
@@ -1355,11 +1441,25 @@ Cada historia termina con estos datos:
 
 **Módulo:** Técnico · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-TEC-15, HU-TEC-19 · **Reglas:** ninguna
 
+### HU-TEC-23 | Integrar con Google Forms y Google Calendar
+
+**Como** equipo, **quiero** conectar SST360 con las APIs de Google, **para** generar encuestas, leer respuestas y gestionar eventos.
+
+**Criterios de aceptación:**
+
+- La empresa autoriza el acceso con su cuenta de Google.
+- Las credenciales se guardan cifradas y nunca llegan al cliente.
+- Se pueden crear formularios, agregar preguntas, publicarlos y leer sus respuestas.
+- Se pueden crear, actualizar y eliminar eventos con invitados.
+- Los errores y límites de uso de Google se manejan sin perder datos.
+
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-TEC-03 · **Reglas:** RN-05, RN-53, D16
+
 ---
 
 ## Resumen
 
-Total: 106 historias: 85 Must y 21 Should. Por entrega: Diseño 16, E1 42, E2 23 y E3 25.
+Total: 113 historias: 90 Must y 23 Should. Por entrega: Diseño 16, E1 44, E2 25 y E3 28.
 
 | ID | Historia | Módulo | Entrega | Dónde | Prioridad |
 |---|---|---|---|---|---|
@@ -1387,15 +1487,16 @@ Total: 106 historias: 85 Must y 21 Should. Por entrega: Diseño 16, E1 42, E2 23
 | HU-M01-06 | Cambiar mi contraseña | M1 | E1 | Web y teléfono | Should |
 | HU-M01-07 | Administrar los catálogos | M1 | E3 | Web | Should |
 | HU-M01-08 | Consultar las empresas registradas | M1 | E3 | Web | Should |
+| HU-M01-09 | Conectar la cuenta de Google | M1 | E1 | Web | Must |
 | HU-M02-01 | Completar el perfil | M2 | E1 | Web | Must |
-| HU-M02-02 | Registrar centros de trabajo | M2 | E1 | Web | Must |
-| HU-M02-03 | Registrar áreas | M2 | E1 | Web | Must |
-| HU-M02-04 | Calcular la composición de la comisión | M2 | E2 | Web | Must |
-| HU-M03-01 | Responder el formulario de contexto | M3 | E1 | Web | Must |
-| HU-M03-02 | Obtener peligros sugeridos | M3 | E1 | Web | Must |
-| HU-M03-03 | Conocer mis brechas | M3 | E1 | Web | Must |
-| HU-M03-04 | Ver mi porcentaje de cumplimiento | M3 | E1 | Web | Must |
-| HU-M03-05 | Repetir el diagnóstico | M3 | E3 | Web | Should |
+| HU-M02-02 | Registrar áreas | M2 | E1 | Web | Must |
+| HU-M02-03 | Calcular la composición de la comisión | M2 | E2 | Web | Must |
+| HU-M03-01 | Elegir categorías de riesgo | M3 | E1 | Web | Must |
+| HU-M03-02 | Generar la encuesta en Google Forms | M3 | E1 | Web | Must |
+| HU-M03-03 | Importar las respuestas | M3 | E1 | Web | Must |
+| HU-M03-04 | Ver el resumen de respuestas | M3 | E1 | Web | Must |
+| HU-M03-05 | Obtener peligros sugeridos | M3 | E1 | Web | Must |
+| HU-M03-06 | Consultar encuestas anteriores | M3 | E3 | Web | Should |
 | HU-M04-01 | Confirmar los peligros sugeridos | M4 | E1 | Web | Must |
 | HU-M04-02 | Agregar riesgos | M4 | E1 | Web | Must |
 | HU-M04-03 | Evaluar un riesgo | M4 | E1 | Web | Must |
@@ -1423,28 +1524,33 @@ Total: 106 historias: 85 Must y 21 Should. Por entrega: Diseño 16, E1 42, E2 23
 | HU-M07-07 | Convertir acuerdos en tareas | M7 | E2 | Web | Should |
 | HU-M07-08 | Consultar el historial de actas | M7 | E2 | Web | Must |
 | HU-M07-09 | Renovar la comisión | M7 | E3 | Web | Should |
-| HU-M08-01 | Crear puntos de inspección | M8 | E2 | Web | Must |
-| HU-M08-02 | Escanear un punto | M8 | E2 | Teléfono | Must |
-| HU-M08-03 | Llenar el checklist | M8 | E2 | Teléfono | Must |
-| HU-M08-04 | Registrar un hallazgo con foto | M8 | E2 | Teléfono | Must |
-| HU-M08-05 | Generar una tarea desde el hallazgo | M8 | E2 | Web | Must |
-| HU-M08-06 | Controlar las visitas mensuales | M8 | E2 | Web | Should |
+| HU-M08-01 | Registrar equipos | M8 | E2 | Web | Must |
+| HU-M08-02 | Registrar un mantenimiento o reparación | M8 | E2 | Web y teléfono | Must |
+| HU-M08-03 | Consultar el historial de un equipo | M8 | E2 | Web | Must |
+| HU-M08-04 | Ver los mantenimientos vencidos | M8 | E2 | Web | Should |
+| HU-M08-05 | Crear una tarea de reparación | M8 | E2 | Web y teléfono | Should |
+| HU-M08-06 | Registrar artículos e ingresos de EPP | M8 | E2 | Web | Must |
+| HU-M08-07 | Registrar entregas de EPP | M8 | E2 | Web | Must |
+| HU-M08-08 | Consultar inventario y entregas de EPP | M8 | E2 | Web | Must |
 | HU-M09-01 | Generar un documento | M9 | E3 | Web | Must |
 | HU-M09-02 | Editar el borrador | M9 | E3 | Web | Must |
 | HU-M09-03 | Aprobar un documento | M9 | E3 | Web | Must |
 | HU-M09-04 | Crear una versión nueva | M9 | E3 | Web | Should |
 | HU-M09-05 | Consultar los documentos vigentes | M9 | E3 | Web y teléfono | Should |
-| HU-M10-01 | Generar el informe semestral | M10 | E3 | Web | Must |
-| HU-M10-02 | Generar el informe anual | M10 | E3 | Web | Must |
-| HU-M10-03 | Descargar un acta en PDF | M10 | E3 | Web | Must |
-| HU-M10-04 | Consultar los informes generados | M10 | E3 | Web | Should |
-| HU-M11-01 | Ver mis notificaciones | M11 | E3 | Web y teléfono | Must |
-| HU-M11-02 | Recibir avisos de tareas | M11 | E3 | Web y teléfono | Must |
-| HU-M11-03 | Recibir avisos de obligaciones | M11 | E3 | Web y teléfono | Should |
-| HU-M11-04 | Recibir alerta de accidente grave | M11 | E3 | Web y teléfono | Must |
-| HU-M11-05 | Recibir notificaciones por correo | M11 | E3 | Web y teléfono | Should |
+| HU-M10-01 | Generar la matriz de riesgos en PDF | M10 | E3 | Web | Must |
+| HU-M10-02 | Generar las políticas en PDF | M10 | E3 | Web | Must |
+| HU-M10-03 | Generar el informe semestral | M10 | E3 | Web | Must |
+| HU-M10-04 | Generar el informe anual | M10 | E3 | Web | Must |
+| HU-M10-05 | Descargar un acta en PDF | M10 | E3 | Web | Must |
+| HU-M10-06 | Consultar los informes generados | M10 | E3 | Web | Should |
+| HU-M11-01 | Llevar las tareas al calendario | M11 | E3 | Web y teléfono | Must |
+| HU-M11-02 | Llevar las reuniones al calendario | M11 | E3 | Web y teléfono | Must |
+| HU-M11-03 | Llevar los mantenimientos al calendario | M11 | E3 | Web y teléfono | Should |
+| HU-M11-04 | Llevar informes y vencimientos al calendario | M11 | E3 | Web y teléfono | Should |
+| HU-M11-05 | Convocar tras un accidente grave | M11 | E3 | Web y teléfono | Must |
+| HU-M11-06 | Mantener el calendario actualizado | M11 | E3 | Web y teléfono | Must |
 | HU-M12-01 | Ver el avance general | M12 | E3 | Web | Must |
-| HU-M12-02 | Ver el estado de los riesgos | M12 | E3 | Web | Must |
+| HU-M12-02 | Ver el estado de equipos y EPP | M12 | E3 | Web | Should |
 | HU-M12-03 | Ver las obligaciones del mes | M12 | E3 | Web | Should |
 | HU-M12-04 | Ver la documentación lista | M12 | E3 | Web | Should |
 | HU-TEC-01 | Crear la solución con Clean Architecture | Técnico | E1 | No aplica | Must |
@@ -1469,3 +1575,4 @@ Total: 106 historias: 85 Must y 21 Should. Por entrega: Diseño 16, E1 42, E2 23
 | HU-TEC-20 | Desplegar el frontend web | Técnico | E1 | Web | Must |
 | HU-TEC-21 | Automatizar el despliegue | Técnico | E1 | No aplica | Must |
 | HU-TEC-22 | Distribuir la app para pruebas | Técnico | E2 | Teléfono | Must |
+| HU-TEC-23 | Integrar con Google Forms y Google Calendar | Técnico | E1 | No aplica | Must |

@@ -10,25 +10,25 @@ SST360 tiene 12 módulos, descritos en [módulos](04-modulos.md).
 
 | # | Módulo | En una frase |
 |---|---|---|
-| M1 | Empresas y acceso | Cada empresa tiene su espacio y sus usuarios |
-| M2 | Perfil de empresa | Sector, centros de trabajo y áreas |
-| M3 | Diagnóstico de contexto | Formulario que sugiere peligros y mide el cumplimiento |
+| M1 | Empresas y acceso | Cada empresa tiene su espacio, sus usuarios y su cuenta de Google conectada |
+| M2 | Perfil de empresa | Datos de la empresa, rubro y áreas |
+| M3 | Diagnóstico de contexto | Encuesta a los trabajadores en Google Forms que sugiere peligros |
 | M4 | Matriz de riesgos | Identificar, evaluar y controlar riesgos |
 | M5 | Plan de trabajo | Tareas con responsable, fecha y evidencia |
 | M6 | Accidentes e incidentes | Registrar e investigar lo ocurrido |
 | M7 | Comisión y actas | Reuniones y actas firmadas de la Comisión Mixta |
-| M8 | Inspecciones QR | Inspecciones y hallazgos desde el teléfono |
+| M8 | Gestión del riesgo | Mantenimiento de equipos con fotos y control del equipo de protección personal |
 | M9 | Políticas y procedimientos | Documentos generados con datos de la empresa |
-| M10 | Reportes | Informes obligatorios y actas en PDF |
-| M11 | Notificaciones | Avisos de lo pendiente |
+| M10 | Reportes | Matriz, políticas, informes obligatorios y actas en PDF |
+| M11 | Notificaciones | Fechas y recordatorios en Google Calendar |
 | M12 | Panel de avance | Vista general de la empresa |
 
 ## Web y teléfono
 
 SST360 es multiplataforma, con reparto según el uso:
 
-- **Teléfono, para el trabajo de campo:** inspecciones, reportar accidentes, atender tareas, firmar actas y recibir notificaciones.
-- **Web, para todo lo demás:** configuración, diagnóstico, matriz de riesgos, documentos, reportes y panel. La web también incluye las funciones del teléfono.
+- **Teléfono, para el trabajo de campo:** registrar mantenimientos con fotos, reportar accidentes, atender tareas y firmar actas. Las fechas y recordatorios llegan por Google Calendar.
+- **Web, para todo lo demás:** configuración, encuesta, matriz de riesgos, inventario de equipo de protección, documentos, reportes y panel. La web también incluye las funciones del teléfono.
 
 La tecnología para construirlo se decidirá más adelante.
 
@@ -38,9 +38,9 @@ Antes de escribir código, el equipo completa el diseño (historias HU-DIS). Des
 
 | Entrega | Módulos | Qué se puede demostrar al terminar |
 |---|---|---|
-| E1. Base y riesgos | M1 a M5 | Una empresa se registra, llena el formulario, obtiene su matriz de riesgos y su plan de trabajo |
-| E2. Operación | M6 a M8 y app para teléfono | Se registran accidentes, la comisión trabaja y se inspecciona con QR desde el teléfono |
-| E3. Documentos y seguimiento | M9 a M12 | Se generan políticas e informes, llegan notificaciones y el panel muestra el avance |
+| E1. Base y riesgos | M1 a M5 | Una empresa se registra, genera la encuesta, obtiene su matriz de riesgos y su plan de trabajo |
+| E2. Operación | M6 a M8 y app para teléfono | Se registran accidentes, la comisión trabaja, y se registran mantenimientos y entregas de equipo de protección |
+| E3. Documentos y seguimiento | M9 a M12 | Se generan políticas e informes, las fechas llegan a Google Calendar y el panel muestra el avance |
 
 ### Por qué un solo MVP y no varios
 
@@ -54,12 +54,13 @@ Si falta tiempo, se recorta en este orden:
 2. Historias Should de E2.
 3. La app para teléfono, conservando esas funciones en la web adaptada a pantallas pequeñas.
 
-**Advertencia:** el alcance es grande: 12 módulos y dos aplicaciones. Aún falta confirmar cuántas personas hay y cuánto tiempo queda. Si el total no cabe, debe decidirse antes de comenzar E2, no al final. La [rúbrica](02-requisitos-curso.md) premia la calidad de la base técnica más que la cantidad de módulos.
+**Advertencia:** el alcance es grande: 12 módulos, dos aplicaciones y dos integraciones con Google. Si el total no cabe en el tiempo disponible, debe decidirse antes de comenzar E2, no al final. La [rúbrica](02-requisitos-curso.md) premia la calidad de la base técnica más que la cantidad de módulos.
 
 ## Fuera de alcance
 
 - Capacitaciones.
 - Auditorías internas.
+- Inspecciones con lista de verificación y códigos QR.
 - Normas distintas de ISO 45001 y de la legislación hondureña de SST.
 - Envío directo de informes a la Secretaría de Trabajo: la empresa descarga el documento y lo presenta.
 - Facturación y planes de pago.
@@ -68,14 +69,17 @@ Si falta tiempo, se recorta en este orden:
 ## Supuestos
 
 - Los clientes son empresas con 10 o más trabajadores permanentes.
-- Cada empresa corresponde a un solo sector.
-- Hay conexión a internet durante inspecciones y reportes.
+- Cada empresa corresponde a un solo rubro.
+- Cada empresa tiene una cuenta de Google para crear sus encuestas y su calendario.
+- Los trabajadores responden la encuesta desde un enlace, sin cuenta en SST360.
+- Hay conexión a internet al registrar mantenimientos y reportar accidentes.
 - La firma electrónica es la de un usuario autenticado, no una firma avanzada certificada.
-- El contenido del formulario, los peligros y las plantillas lo redacta el equipo en cantidad reducida por sector, y debe revisarlo alguien con conocimiento de SST.
+- El contenido de las categorías, preguntas, peligros y plantillas lo redacta el equipo en cantidad reducida por rubro, y debe revisarlo alguien con conocimiento de SST.
 
 ## Limitaciones
 
 - **Infraestructura gratuita:** el servicio gratuito de Render se suspende tras 15 minutos sin uso, tarda hasta un minuto en reactivarse y pierde los archivos que tenga guardados. Las fotos y evidencias necesitan un almacenamiento externo.
 - **Espacio de base de datos:** el plan gratuito de Neon ronda 1 GB por proyecto. Conviene confirmarlo antes de depender de esa cifra.
+- **Dependencia de Google:** las encuestas y los recordatorios dependen de las APIs de Google Forms y Google Calendar, de sus límites de uso y de que la empresa autorice el acceso a su cuenta.
 - **ISO 45001 tiene derechos de autor:** se cita por número de cláusula y se redacta con palabras propias.
 - **Reglamento revisado:** versión reformada publicada en La Gaceta 30,523, del 19 de octubre de 2004. No se comprobó si tiene reformas posteriores.
