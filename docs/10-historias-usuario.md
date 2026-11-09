@@ -8,9 +8,9 @@ Una historia de usuario (HU) dice quién necesita algo, qué necesita y para qu�
 
 | Código | Contenido |
 |---|---|
-| `HU-DIS-xx` | Análisis y diseño, antes de programar |
-| `HU-M01-xx` a `HU-M12-xx` | Funciones de cada [módulo](04-modulos.md) |
-| `HU-TEC-xx` | Trabajo técnico exigido por el [curso](02-requisitos-curso.md) o necesario para el producto |
+| `HU-001` a `HU-016` | Análisis y diseño, antes de programar |
+| `HU-017` a `HU-090` | Funciones de cada [módulo](04-modulos.md) (M1 a M12) |
+| `HU-091` a `HU-113` | Trabajo técnico exigido por el [curso](02-requisitos-curso.md) o necesario para el producto |
 
 Cada historia termina con estos datos:
 
@@ -24,7 +24,7 @@ Cada historia termina con estos datos:
 
 ## Análisis y diseño
 
-### HU-DIS-01 | Aprobar el alcance
+### HU-001 | Aprobar el alcance
 
 **Como** equipo, **quiero** aprobar los módulos, las entregas y las exclusiones, **para** saber qué vamos a construir.
 
@@ -35,7 +35,7 @@ Cada historia termina con estos datos:
 
 **Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** ninguna · **Reglas:** ninguna
 
-### HU-DIS-02 | Documentar los requerimientos funcionales
+### HU-002 | Documentar los requerimientos funcionales
 
 **Como** equipo, **quiero** listar los requerimientos de cada módulo, **para** tener claro qué operaciones permite el sistema.
 
@@ -45,9 +45,9 @@ Cada historia termina con estos datos:
 - Se indican entradas y resultados esperados.
 - Cada requerimiento se relaciona con al menos una HU.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-001 · **Reglas:** ninguna
 
-### HU-DIS-03 | Documentar los requerimientos no funcionales
+### HU-003 | Documentar los requerimientos no funcionales
 
 **Como** equipo, **quiero** definir las condiciones de calidad y operación, **para** que sean alcanzables con infraestructura gratuita.
 
@@ -59,9 +59,9 @@ Cada historia termina con estos datos:
 - Se documentan las dependencias de Google: cuenta, permisos y límites de uso.
 - Se documentan las restricciones del curso.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** D14, D16
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-001 · **Reglas:** D14, D16
 
-### HU-DIS-04 | Validar las reglas de negocio
+### HU-004 | Validar las reglas de negocio
 
 **Como** equipo, **quiero** revisar y completar las reglas de negocio, **para** que controlen correctamente el sistema.
 
@@ -71,9 +71,9 @@ Cada historia termina con estos datos:
 - Cada regla se relaciona con sus requerimientos.
 - Las reglas marcadas como propuesta quedan confirmadas o ajustadas.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-02 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-002 · **Reglas:** ninguna
 
-### HU-DIS-05 | Priorizar el backlog
+### HU-005 | Priorizar el backlog
 
 **Como** equipo, **quiero** ordenar las HUs por prioridad y dependencias, **para** saber qué se hace primero.
 
@@ -83,9 +83,9 @@ Cada historia termina con estos datos:
 - Se identifican las HUs bloqueadas por pendientes.
 - El backlog queda ordenado en el tablero.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-02, HU-DIS-16 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-002, HU-016 · **Reglas:** ninguna
 
-### HU-DIS-06 | Elaborar casos de uso
+### HU-006 | Elaborar casos de uso
 
 **Como** equipo, **quiero** representar los casos de uso principales, **para** visualizar qué hace cada rol.
 
@@ -94,9 +94,9 @@ Cada historia termina con estos datos:
 - Un diagrama relaciona los 4 roles con los módulos.
 - Se describen los casos de uso principales.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Should · **Depende de:** HU-DIS-02 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Should · **Depende de:** HU-002 · **Reglas:** ninguna
 
-### HU-DIS-07 | Documentar los flujos principales
+### HU-007 | Documentar los flujos principales
 
 **Como** equipo, **quiero** documentar los flujos del producto, **para** entender la secuencia de cada operación.
 
@@ -112,9 +112,9 @@ Cada historia termina con estos datos:
 - Se documenta fecha en SST360 → evento en Google Calendar → actualización o eliminación.
 - Cada flujo indica inicio, resultado, alternativas y errores.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-02 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-002 · **Reglas:** ninguna
 
-### HU-DIS-08 | Elaborar el diccionario de datos
+### HU-008 | Elaborar el diccionario de datos
 
 **Como** equipo, **quiero** definir entidades y atributos, **para** establecer la información que guardará la plataforma.
 
@@ -124,9 +124,9 @@ Cada historia termina con estos datos:
 - Se indican los atributos obligatorios y opcionales.
 - Cada entidad se clasifica como raíz, global o con `EmpresaId`.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** D1 a D18
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-001 · **Reglas:** D1 a D18
 
-### HU-DIS-09 | Definir el aislamiento multiempresa
+### HU-009 | Definir el aislamiento multiempresa
 
 **Como** equipo, **quiero** definir cómo se separa la información de cada empresa, **para** garantizar que nadie vea datos ajenos.
 
@@ -137,9 +137,9 @@ Cada historia termina con estos datos:
 - Se define cómo se obtiene la empresa activa.
 - Se documenta cómo se impiden las referencias entre empresas.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-08 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D1, D7, D15
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-008 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D1, D7, D15
 
-### HU-DIS-10 | Diseñar el diagrama entidad-relación
+### HU-010 | Diseñar el diagrama entidad-relación
 
 **Como** equipo, **quiero** elaborar el ERD en tercera forma normal, **para** definir la estructura de la base de datos.
 
@@ -151,9 +151,9 @@ Cada historia termina con estos datos:
 - Las decisiones de normalización quedan documentadas.
 - Cada tabla existe en el diccionario de datos.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-08, HU-DIS-09 · **Reglas:** D1 a D18
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-008, HU-009 · **Reglas:** D1 a D18
 
-### HU-DIS-11 | Definir restricciones e índices
+### HU-011 | Definir restricciones e índices
 
 **Como** equipo, **quiero** definir restricciones e índices, **para** proteger la integridad y optimizar las consultas.
 
@@ -163,9 +163,9 @@ Cada historia termina con estos datos:
 - Se documentan las reglas de eliminación y actualización.
 - Se identifican índices frecuentes, incluido `EmpresaId`.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-10 · **Reglas:** D15
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-010 · **Reglas:** D15
 
-### HU-DIS-12 | Definir los contratos de la API
+### HU-012 | Definir los contratos de la API
 
 **Como** equipo, **quiero** definir endpoints y DTOs, **para** acordar cómo se comunican los clientes con el backend.
 
@@ -177,9 +177,9 @@ Cada historia termina con estos datos:
 - Hay una estructura uniforme para errores.
 - Los contratos sirven para web y teléfono.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-02, HU-DIS-10 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-002, HU-010 · **Reglas:** ninguna
 
-### HU-DIS-13 | Diseñar la arquitectura del backend
+### HU-013 | Diseñar la arquitectura del backend
 
 **Como** equipo, **quiero** definir la arquitectura, **para** separar responsabilidades.
 
@@ -190,9 +190,9 @@ Cada historia termina con estos datos:
 - Se define dónde van los casos de uso, la persistencia y el `DbContext`.
 - Se documentan la inyección de dependencias, el manejo de errores y Vertical Slicing.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-001 · **Reglas:** ninguna
 
-### HU-DIS-14 | Diseñar autenticación y autorización
+### HU-014 | Diseñar autenticación y autorización
 
 **Como** equipo, **quiero** definir el mecanismo de acceso, **para** proteger los recursos.
 
@@ -205,9 +205,9 @@ Cada historia termina con estos datos:
 - Se identifican endpoints públicos y protegidos.
 - Se documentan las respuestas 401 y 403.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-09 · **Reglas:** RN-03, RN-06, D1
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-009 · **Reglas:** RN-03, RN-06, D1
 
-### HU-DIS-15 | Redactar el pitch de 1 página
+### HU-015 | Redactar el pitch de 1 página
 
 **Como** equipo, **quiero** resumir SST360 en una página, **para** cumplir el entregable de la Fase 1 del curso.
 
@@ -217,9 +217,9 @@ Cada historia termina con estos datos:
 - Coincide con el alcance aprobado.
 - Indica que la plataforma prepara a la empresa y no certifica.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-001 · **Reglas:** ninguna
 
-### HU-DIS-16 | Configurar el tablero Kanban
+### HU-016 | Configurar el tablero Kanban
 
 **Como** equipo, **quiero** cargar las HUs en GitHub Projects, **para** dar seguimiento al trabajo.
 
@@ -229,13 +229,13 @@ Cada historia termina con estos datos:
 - Cada HU es un issue con sus criterios de aceptación.
 - Los issues tienen entrega, módulo, prioridad y responsable.
 
-**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-01 · **Reglas:** ninguna
+**Módulo:** Diseño · **Entrega:** Diseño · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-001 · **Reglas:** ninguna
 
 ---
 
 ## M1. Empresas y acceso
 
-### HU-M01-01 | Registrar mi empresa
+### HU-017 | Registrar mi empresa
 
 **Como** representante de una empresa, **quiero** registrarla, **para** empezar a gestionar su SST.
 
@@ -246,22 +246,21 @@ Cada historia termina con estos datos:
 - Un identificador de empresa repetido se rechaza con un mensaje claro.
 - La contraseña se guarda con hash, nunca en texto plano.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-TEC-02 · **Reglas:** RN-01, D2
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-091, HU-092 · **Reglas:** RN-01, D2
 
-### HU-M01-02 | Iniciar y cerrar sesión
+### HU-018 | Iniciar y cerrar sesión
 
 **Como** usuario, **quiero** iniciar y cerrar sesión, **para** acceder de forma segura.
 
 **Criterios de aceptación:**
 
 - Con una sola membresía activa entro directamente a esa empresa.
-- Con varias membresías debo elegir una.
 - Las credenciales incorrectas reciben un mensaje que no revela qué dato falló.
 - Una membresía desactivada no da acceso a esa empresa.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-01, HU-TEC-04 · **Reglas:** RN-02, D1
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-017, HU-094 · **Reglas:** RN-02, D1
 
-### HU-M01-03 | Cambiar de empresa
+### HU-019 | Cambiar de empresa
 
 **Como** usuario de varias empresas, **quiero** cambiar de empresa activa, **para** trabajar en cada una sin volver a entrar.
 
@@ -272,9 +271,9 @@ Cada historia termina con estos datos:
 - Pedir una empresa ajena devuelve 403.
 - Dejan de mostrarse los datos de la empresa anterior.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-02 · **Reglas:** RN-02, RN-03, RN-05, D1
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-018 · **Reglas:** RN-02, RN-03, RN-05, D1
 
-### HU-M01-04 | Agregar usuarios
+### HU-020 | Agregar usuarios
 
 **Como** Administrador de empresa, **quiero** agregar usuarios, **para** que participen en la gestión.
 
@@ -285,9 +284,9 @@ Cada historia termina con estos datos:
 - Elijo su rol al agregarlo.
 - Un usuario no puede tener dos membresías en la misma empresa.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-02 · **Reglas:** RN-02, D5
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-018 · **Reglas:** RN-02, D5
 
-### HU-M01-05 | Gestionar roles y membresías
+### HU-021 | Gestionar roles y membresías
 
 **Como** Administrador de empresa, **quiero** cambiar roles y desactivar membresías, **para** controlar quién accede.
 
@@ -298,9 +297,9 @@ Cada historia termina con estos datos:
 - La empresa no puede quedar sin Administrador activo.
 - Otros roles reciben 403.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-04, HU-TEC-05 · **Reglas:** RN-03, RN-08
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-020, HU-095 · **Reglas:** RN-03, RN-08
 
-### HU-M01-06 | Cambiar mi contraseña
+### HU-022 | Cambiar mi contraseña
 
 **Como** usuario, **quiero** cambiar mi contraseña, **para** proteger mi cuenta.
 
@@ -310,9 +309,9 @@ Cada historia termina con estos datos:
 - La nueva cumple la política definida.
 - Debo cambiar el acceso temporal al entrar por primera vez.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M01-02 · **Reglas:** ninguna
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-018 · **Reglas:** ninguna
 
-### HU-M01-07 | Administrar los catálogos
+### HU-023 | Administrar los catálogos
 
 **Como** Administrador de plataforma, **quiero** mantener rubros, categorías de riesgo, preguntas exploratorias, peligros y plantillas, **para** actualizar el contenido sin programar.
 
@@ -324,9 +323,9 @@ Cada historia termina con estos datos:
 - Los cambios no alteran encuestas ya generadas.
 - Otros roles reciben 403.
 
-**Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-TEC-07 · **Reglas:** RN-12, D7
+**Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-097 · **Reglas:** RN-12, D7
 
-### HU-M01-08 | Consultar las empresas registradas
+### HU-024 | Consultar las empresas registradas
 
 **Como** Administrador de plataforma, **quiero** ver las empresas registradas, **para** conocer el uso de la plataforma.
 
@@ -335,9 +334,9 @@ Cada historia termina con estos datos:
 - Veo nombre, rubro, fecha de registro y número de usuarios.
 - No veo su información de SST.
 
-**Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M01-01 · **Reglas:** RN-05
+**Módulo:** M1 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-017 · **Reglas:** RN-05
 
-### HU-M01-09 | Conectar la cuenta de Google
+### HU-025 | Conectar la cuenta de Google
 
 **Como** Administrador de empresa, **quiero** conectar la cuenta de Google de la empresa, **para** generar encuestas y usar el calendario.
 
@@ -349,13 +348,13 @@ Cada historia termina con estos datos:
 - Sin cuenta conectada, SST360 indica que no se pueden generar encuestas ni eventos.
 - Las credenciales nunca se muestran.
 
-**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-05, HU-TEC-23 · **Reglas:** RN-53, D16
+**Módulo:** M1 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-021, HU-113 · **Reglas:** RN-53, D16
 
 ---
 
 ## M2. Perfil de empresa
 
-### HU-M02-01 | Completar el perfil
+### HU-026 | Completar el perfil
 
 **Como** Administrador de empresa, **quiero** registrar los datos de mi empresa y su rubro, **para** que la plataforma sepa qué me aplica y pueda generar los informes.
 
@@ -366,9 +365,9 @@ Cada historia termina con estos datos:
 - El RTN no puede repetirse entre empresas.
 - Puedo actualizar los datos.
 
-**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M01-01, HU-TEC-07 · **Reglas:** RN-01, RN-09, D5, D7
+**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-017, HU-097 · **Reglas:** RN-01, RN-09, D5, D7
 
-### HU-M02-02 | Registrar áreas
+### HU-027 | Registrar áreas
 
 **Como** Administrador de empresa, **quiero** registrar las áreas de mi empresa, **para** ubicar riesgos, equipos y responsables.
 
@@ -378,9 +377,9 @@ Cada historia termina con estos datos:
 - Puedo asignar un Encargado de área.
 - Un área con registros asociados se desactiva, no se borra.
 
-**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01 · **Reglas:** RN-07, D3, D4
+**Módulo:** M2 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-026 · **Reglas:** RN-07, D3, D4
 
-### HU-M02-03 | Calcular la composición de la comisión
+### HU-028 | Calcular la composición de la comisión
 
 **Como** Responsable SST, **quiero** saber cuántos representantes necesita la comisión, **para** cumplir la ley.
 
@@ -391,13 +390,13 @@ Cada historia termina con estos datos:
 - El resultado se calcula con los trabajadores permanentes de la empresa y no se guarda.
 - Si cambia el número de trabajadores, recuerda comunicarlo a la Secretaría de Trabajo.
 
-**Módulo:** M2 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01 · **Reglas:** arts. 12, 14, 17, RN-32
+**Módulo:** M2 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-026 · **Reglas:** arts. 12, 14, 17, RN-32
 
 ---
 
 ## M3. Diagnóstico de contexto
 
-### HU-M03-01 | Elegir categorías de riesgo
+### HU-029 | Elegir categorías de riesgo
 
 **Como** Responsable SST, **quiero** elegir las categorías de riesgo que quiero explorar, **para** que la encuesta pregunte lo que aplica a mi empresa.
 
@@ -407,9 +406,9 @@ Cada historia termina con estos datos:
 - Puedo elegir una o varias categorías.
 - Antes de generar la encuesta veo las preguntas que incluirá.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02, HU-TEC-07 · **Reglas:** RN-09, RN-11, D7
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-027, HU-097 · **Reglas:** RN-09, RN-11, D7
 
-### HU-M03-02 | Generar la encuesta en Google Forms
+### HU-030 | Generar la encuesta en Google Forms
 
 **Como** Responsable SST, **quiero** generar la encuesta con un clic, **para** compartirla con los trabajadores sin armarla a mano.
 
@@ -421,9 +420,9 @@ Cada historia termina con estos datos:
 - Se registran categorías, preguntas, fecha y autor.
 - Si Google falla, se informa el error y no queda una encuesta a medias.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-01, HU-M01-09 · **Reglas:** RN-10, RN-12, D8, D16
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-029, HU-025 · **Reglas:** RN-10, RN-12, D8, D16
 
-### HU-M03-03 | Importar las respuestas
+### HU-031 | Importar las respuestas
 
 **Como** Responsable SST, **quiero** traer las respuestas de la encuesta, **para** analizarlas en SST360.
 
@@ -433,9 +432,9 @@ Cada historia termina con estos datos:
 - Importar de nuevo trae solo las respuestas nuevas, sin duplicar.
 - Veo cuántas respuestas tiene la encuesta y la fecha de la última importación.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-02 · **Reglas:** D8, D16
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-030 · **Reglas:** D8, D16
 
-### HU-M03-04 | Ver el resumen de respuestas
+### HU-032 | Ver el resumen de respuestas
 
 **Como** Responsable SST, **quiero** ver un resumen de las respuestas, **para** entender la situación de cada área.
 
@@ -444,9 +443,9 @@ Cada historia termina con estos datos:
 - Veo, por pregunta, cuántos trabajadores dieron cada respuesta.
 - Puedo filtrar el resumen por área.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-03 · **Reglas:** ninguna
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-031 · **Reglas:** ninguna
 
-### HU-M03-05 | Obtener peligros sugeridos
+### HU-033 | Obtener peligros sugeridos
 
 **Como** Responsable SST, **quiero** que el sistema sugiera peligros a partir de las respuestas, **para** construir la matriz sin empezar de cero.
 
@@ -458,9 +457,9 @@ Cada historia termina con estos datos:
 - Importar nuevas respuestas actualiza las sugerencias sin duplicarlas.
 - Asociar un peligro a otra pregunta del catálogo cambia los resultados sin modificar código.
 
-**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-03 · **Reglas:** art. 46.1.b, RN-13, RN-14, D9
+**Módulo:** M3 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-031 · **Reglas:** art. 46.1.b, RN-13, RN-14, D9
 
-### HU-M03-06 | Consultar encuestas anteriores
+### HU-034 | Consultar encuestas anteriores
 
 **Como** Responsable SST, **quiero** ver las encuestas anteriores, **para** comparar cómo cambian los resultados.
 
@@ -469,13 +468,13 @@ Cada historia termina con estos datos:
 - Veo cada encuesta con su fecha, categorías y número de respuestas.
 - Puedo abrir el resumen y las sugerencias de cada una.
 
-**Módulo:** M3 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M03-05 · **Reglas:** RN-12, D8
+**Módulo:** M3 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-033 · **Reglas:** RN-12, D8
 
 ---
 
 ## M4. Matriz de riesgos
 
-### HU-M04-01 | Confirmar los peligros sugeridos
+### HU-035 | Confirmar los peligros sugeridos
 
 **Como** Responsable SST, **quiero** revisar los peligros sugeridos por la encuesta, **para** dejar en la matriz solo los que aplican.
 
@@ -485,9 +484,9 @@ Cada historia termina con estos datos:
 - Al confirmar se crea el riesgo en el área sugerida, que puedo cambiar.
 - Un peligro sin confirmar no aparece en la matriz.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M03-05 · **Reglas:** RN-17, RN-18, D9
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-033 · **Reglas:** RN-17, RN-18, D9
 
-### HU-M04-02 | Agregar riesgos
+### HU-036 | Agregar riesgos
 
 **Como** Responsable SST, **quiero** agregar riesgos por mi cuenta, **para** incluir lo que el formulario no detectó.
 
@@ -496,9 +495,9 @@ Cada historia termina con estos datos:
 - Elijo un peligro del catálogo o lo describo.
 - Indico el área y la actividad relacionada.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** RN-17, D9
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-027 · **Reglas:** RN-17, D9
 
-### HU-M04-03 | Evaluar un riesgo
+### HU-037 | Evaluar un riesgo
 
 **Como** Responsable SST, **quiero** evaluar probabilidad y severidad, **para** conocer el nivel de cada riesgo.
 
@@ -508,9 +507,9 @@ Cada historia termina con estos datos:
 - El sistema calcula el nivel y lo clasifica.
 - Se registran evaluador y fecha.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-01 · **Reglas:** art. 46.1.b, RN-15, RN-16, D10
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-035 · **Reglas:** art. 46.1.b, RN-15, RN-16, D10
 
-### HU-M04-04 | Ver la matriz de riesgos
+### HU-038 | Ver la matriz de riesgos
 
 **Como** Responsable SST, **quiero** ver todos mis riesgos, **para** decidir qué atender primero.
 
@@ -520,9 +519,9 @@ Cada historia termina con estos datos:
 - Veo también una lista filtrable por centro, área y nivel.
 - Puedo abrir el detalle de cada riesgo.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-03 · **Reglas:** art. 47.b
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-037 · **Reglas:** art. 47.b
 
-### HU-M04-05 | Definir controles
+### HU-039 | Definir controles
 
 **Como** Responsable SST, **quiero** definir controles, **para** reducir cada riesgo.
 
@@ -532,9 +531,9 @@ Cada historia termina con estos datos:
 - Un riesgo alto o crítico exige al menos un control.
 - Se señalan los riesgos altos sin control.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-03 · **Reglas:** art. 46.1.e, RN-19, RN-21
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-037 · **Reglas:** art. 46.1.e, RN-19, RN-21
 
-### HU-M04-06 | Evaluar el riesgo residual
+### HU-040 | Evaluar el riesgo residual
 
 **Como** Responsable SST, **quiero** evaluar el riesgo con los controles aplicados, **para** saber si bajó.
 
@@ -543,9 +542,9 @@ Cada historia termina con estos datos:
 - La evaluación residual queda separada de la inicial.
 - Veo ambos niveles lado a lado.
 
-**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M04-05 · **Reglas:** RN-20, D10
+**Módulo:** M4 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-039 · **Reglas:** RN-20, D10
 
-### HU-M04-07 | Consultar el historial de un riesgo
+### HU-041 | Consultar el historial de un riesgo
 
 **Como** Responsable SST, **quiero** ver las evaluaciones anteriores, **para** demostrar la evolución.
 
@@ -554,13 +553,13 @@ Cada historia termina con estos datos:
 - Veo todas las evaluaciones con fecha y autor.
 - Una evaluación nueva no borra las anteriores.
 
-**Módulo:** M4 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M04-06 · **Reglas:** art. 47.b, RN-20
+**Módulo:** M4 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-040 · **Reglas:** art. 47.b, RN-20
 
 ---
 
 ## M5. Plan de trabajo
 
-### HU-M05-01 | Generar el plan
+### HU-042 | Generar el plan
 
 **Como** Responsable SST, **quiero** convertir los riesgos y sus controles en tareas, **para** saber qué hacer y en qué orden.
 
@@ -571,9 +570,9 @@ Cada historia termina con estos datos:
 - Puedo revisar el plan antes de confirmarlo.
 - Generarlo dos veces no duplica tareas.
 
-**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-05 · **Reglas:** art. 46.1.e, RN-23, D6
+**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-039 · **Reglas:** art. 46.1.e, RN-23, D6
 
-### HU-M05-02 | Asignar tareas
+### HU-043 | Asignar tareas
 
 **Como** Responsable SST, **quiero** asignar responsable y fecha, **para** que cada tarea tenga dueño.
 
@@ -583,9 +582,9 @@ Cada historia termina con estos datos:
 - La tarea exige fecha límite.
 - Puedo crear tareas manuales.
 
-**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M05-01 · **Reglas:** RN-07, RN-22, D6
+**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-042 · **Reglas:** RN-07, RN-22, D6
 
-### HU-M05-03 | Atender mis tareas
+### HU-044 | Atender mis tareas
 
 **Como** Colaborador, **quiero** ver y actualizar mis tareas, **para** informar mi avance.
 
@@ -595,9 +594,9 @@ Cada historia termina con estos datos:
 - Puedo pasarlas por pendiente, en progreso y completada.
 - No puedo cambiar tareas ajenas.
 
-**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M05-02, HU-TEC-05 · **Reglas:** RN-24
+**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-043, HU-095 · **Reglas:** RN-24
 
-### HU-M05-04 | Adjuntar evidencia
+### HU-045 | Adjuntar evidencia
 
 **Como** responsable de una tarea, **quiero** adjuntar evidencia, **para** demostrar que se hizo.
 
@@ -608,9 +607,9 @@ Cada historia termina con estos datos:
 - Solo usuarios de mi empresa pueden verlo.
 - Si la tarea exige evidencia, no se completa sin ella.
 
-**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M05-03, HU-TEC-10 · **Reglas:** RN-05, RN-25, D14
+**Módulo:** M5 · **Entrega:** E1 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-044, HU-100 · **Reglas:** RN-05, RN-25, D14
 
-### HU-M05-05 | Filtrar el plan
+### HU-046 | Filtrar el plan
 
 **Como** Responsable SST, **quiero** filtrar tareas, **para** encontrar lo urgente.
 
@@ -619,13 +618,13 @@ Cada historia termina con estos datos:
 - Puedo filtrar por estado, responsable, origen y fecha.
 - Las tareas vencidas se distinguen claramente.
 
-**Módulo:** M5 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M05-02 · **Reglas:** ninguna
+**Módulo:** M5 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-043 · **Reglas:** ninguna
 
 ---
 
 ## M6. Accidentes e incidentes
 
-### HU-M06-01 | Reportar un evento
+### HU-047 | Reportar un evento
 
 **Como** Colaborador, **quiero** reportar un accidente o incidente desde donde esté, **para** que se atienda de inmediato.
 
@@ -638,9 +637,9 @@ Cada historia termina con estos datos:
 - El sistema registra quién reporta y cuándo.
 - Cualquier usuario de la empresa puede reportar.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M02-02, HU-TEC-10, HU-TEC-15 · **Reglas:** arts. 9.j, 46.1.d, RN-26, RN-27, RN-31
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-027, HU-100, HU-105 · **Reglas:** arts. 9.j, 46.1.d, RN-26, RN-27, RN-31
 
-### HU-M06-02 | Registrar a las personas afectadas
+### HU-048 | Registrar a las personas afectadas
 
 **Como** Responsable SST, **quiero** registrar a las personas afectadas, **para** llevar el control de cada caso.
 
@@ -650,9 +649,9 @@ Cada historia termina con estos datos:
 - La persona no necesita tener cuenta.
 - Solo el Responsable SST y la comisión ven estos datos.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M06-01 · **Reglas:** art. 47.f, RN-30, D11
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-047 · **Reglas:** art. 47.f, RN-30, D11
 
-### HU-M06-03 | Investigar un evento
+### HU-049 | Investigar un evento
 
 **Como** Responsable SST, **quiero** registrar causas y conclusiones, **para** entender por qué ocurrió.
 
@@ -662,9 +661,9 @@ Cada historia termina con estos datos:
 - Registro responsables de la investigación y fecha.
 - El evento no se cierra sin causas y medidas.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M06-01 · **Reglas:** arts. 25.d, 46.1.a, RN-28
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-047 · **Reglas:** arts. 25.d, 46.1.a, RN-28
 
-### HU-M06-04 | Definir medidas correctivas
+### HU-050 | Definir medidas correctivas
 
 **Como** Responsable SST, **quiero** convertir las medidas en tareas, **para** evitar que se repita.
 
@@ -673,9 +672,9 @@ Cada historia termina con estos datos:
 - Cada medida crea una tarea con origen "accidente".
 - Desde el evento veo el avance de sus medidas.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M06-03, HU-M05-02 · **Reglas:** art. 46.1.a, RN-23, D6
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-049, HU-043 · **Reglas:** art. 46.1.a, RN-23, D6
 
-### HU-M06-05 | Actualizar la matriz tras un evento
+### HU-051 | Actualizar la matriz tras un evento
 
 **Como** Responsable SST, **quiero** enlazar el evento con un riesgo, **para** revisar la matriz con lo aprendido.
 
@@ -684,9 +683,9 @@ Cada historia termina con estos datos:
 - Puedo enlazarlo a un riesgo existente o crear uno nuevo.
 - Puedo reevaluar el riesgo enlazado.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M06-03, HU-M04-03 · **Reglas:** art. 47.b, D9
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-049, HU-037 · **Reglas:** art. 47.b, D9
 
-### HU-M06-06 | Consultar estadísticas
+### HU-052 | Consultar estadísticas
 
 **Como** Responsable SST, **quiero** ver estadísticas, **para** detectar patrones.
 
@@ -696,13 +695,13 @@ Cada historia termina con estos datos:
 - Veo días de incapacidad y ausentismo por periodo.
 - Las cifras se calculan y no muestran datos personales.
 
-**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M06-02 · **Reglas:** arts. 47.e, 47.f, RN-30
+**Módulo:** M6 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-048 · **Reglas:** arts. 47.e, 47.f, RN-30
 
 ---
 
 ## M7. Comisión y actas
 
-### HU-M07-01 | Constituir la comisión
+### HU-053 | Constituir la comisión
 
 **Como** Responsable SST, **quiero** registrar la comisión de la empresa, **para** gestionarla en la plataforma.
 
@@ -713,9 +712,9 @@ Cada historia termina con estos datos:
 - La empresa tiene una sola comisión activa.
 - Se advierte si pasaron más de 30 días desde el inicio de operaciones.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-03, HU-TEC-10 · **Reglas:** arts. 12, 15, D4, D14
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-028, HU-100 · **Reglas:** arts. 12, 15, D4, D14
 
-### HU-M07-02 | Registrar los integrantes
+### HU-054 | Registrar los integrantes
 
 **Como** Responsable SST, **quiero** registrar a los integrantes, **para** cumplir la composición legal.
 
@@ -727,9 +726,9 @@ Cada historia termina con estos datos:
 - Hay un presidente y un secretario activos.
 - Los integrantes son usuarios de la empresa.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-01, HU-M01-04 · **Reglas:** arts. 14, 19, 20, 21, 28.c, RN-32, RN-33, RN-36, D3, D5
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-053, HU-020 · **Reglas:** arts. 14, 19, 20, 21, 28.c, RN-32, RN-33, RN-36, D3, D5
 
-### HU-M07-03 | Programar reuniones
+### HU-055 | Programar reuniones
 
 **Como** secretario de la comisión, **quiero** programar reuniones, **para** cumplir la reunión mensual.
 
@@ -740,9 +739,9 @@ Cada historia termina con estos datos:
 - Una reunión extraordinaria registra su motivo.
 - El sistema señala los meses sin reunión ordinaria.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-02 · **Reglas:** arts. 24, 27.a, 32, RN-37
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-054 · **Reglas:** arts. 24, 27.a, 32, RN-37
 
-### HU-M07-04 | Registrar asistencia y quórum
+### HU-056 | Registrar asistencia y quórum
 
 **Como** secretario de la comisión, **quiero** registrar la asistencia, **para** verificar el quórum.
 
@@ -752,9 +751,9 @@ Cada historia termina con estos datos:
 - Un suplente solo cuenta si falta su propietario.
 - El sistema indica si hay quórum.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-03 · **Reglas:** arts. 14, 23, 27.b, RN-34, RN-35
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-055 · **Reglas:** arts. 14, 23, 27.b, RN-34, RN-35
 
-### HU-M07-05 | Redactar el acta
+### HU-057 | Redactar el acta
 
 **Como** secretario de la comisión, **quiero** redactar el acta, **para** dejar constancia de la reunión.
 
@@ -764,9 +763,9 @@ Cada historia termina con estos datos:
 - Queda como borrador editable.
 - Solo el secretario puede redactarla.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-04 · **Reglas:** arts. 27.c, 33, D3
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-056 · **Reglas:** arts. 27.c, 33, D3
 
-### HU-M07-06 | Aprobar y firmar el acta
+### HU-058 | Aprobar y firmar el acta
 
 **Como** integrante de la comisión, **quiero** aprobar y firmar el acta, **para** que quede como registro verificable.
 
@@ -778,9 +777,9 @@ Cada historia termina con estos datos:
 - Un acta firmada no se edita ni se borra por ninguna vía.
 - Se puede comprobar que el contenido coincide con su hash.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M07-05, HU-TEC-15 · **Reglas:** art. 27.c, RN-38, RN-39, RN-40, RN-41, D12
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-057, HU-105 · **Reglas:** art. 27.c, RN-38, RN-39, RN-40, RN-41, D12
 
-### HU-M07-07 | Convertir acuerdos en tareas
+### HU-059 | Convertir acuerdos en tareas
 
 **Como** secretario de la comisión, **quiero** crear tareas desde los acuerdos, **para** dar seguimiento a lo decidido.
 
@@ -788,9 +787,9 @@ Cada historia termina con estos datos:
 
 - La tarea queda con origen "acuerdo de reunión" y referencia al acta.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M05-02, HU-M07-05 · **Reglas:** RN-23, D6
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-043, HU-057 · **Reglas:** RN-23, D6
 
-### HU-M07-08 | Consultar el historial de actas
+### HU-060 | Consultar el historial de actas
 
 **Como** usuario de la empresa, **quiero** consultar las actas, **para** tenerlas disponibles ante la autoridad.
 
@@ -799,9 +798,9 @@ Cada historia termina con estos datos:
 - Veo las actas firmadas por fecha, con búsqueda por periodo.
 - Los borradores solo los ve la comisión.
 
-**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-06 · **Reglas:** arts. 27.e, 33, RN-05
+**Módulo:** M7 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-058 · **Reglas:** arts. 27.e, 33, RN-05
 
-### HU-M07-09 | Renovar la comisión
+### HU-061 | Renovar la comisión
 
 **Como** Responsable SST, **quiero** registrar nuevos periodos, **para** mantener vigente la comisión.
 
@@ -810,13 +809,13 @@ Cada historia termina con estos datos:
 - Puedo registrar nuevos integrantes o reelegir a los actuales.
 - Se conserva el historial de integrantes anteriores.
 
-**Módulo:** M7 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M07-02 · **Reglas:** arts. 17, 21, RN-36
+**Módulo:** M7 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-054 · **Reglas:** arts. 17, 21, RN-36
 
 ---
 
 ## M8. Gestión del riesgo
 
-### HU-M08-01 | Registrar equipos
+### HU-062 | Registrar equipos
 
 **Como** Responsable SST, **quiero** registrar los equipos y productos de la empresa, **para** controlar su mantenimiento.
 
@@ -827,9 +826,9 @@ Cada historia termina con estos datos:
 - Puedo marcar un equipo como equipo de emergencia.
 - Puedo indicar la próxima fecha de mantenimiento.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** RN-42, D17
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-027 · **Reglas:** RN-42, D17
 
-### HU-M08-02 | Registrar un mantenimiento o reparación
+### HU-063 | Registrar un mantenimiento o reparación
 
 **Como** responsable de mantenimiento, **quiero** registrar el trabajo desde el teléfono, **para** dejar constancia con fotografías.
 
@@ -842,9 +841,9 @@ Cada historia termina con estos datos:
 - La fecha de registro la fija el servidor, y un mantenimiento realizado no se edita.
 - Al registrar un preventivo puedo programar la siguiente fecha.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M08-01, HU-TEC-10, HU-TEC-15 · **Reglas:** RN-43, RN-44, D14, D17
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-062, HU-100, HU-105 · **Reglas:** RN-43, RN-44, D14, D17
 
-### HU-M08-03 | Consultar el historial de un equipo
+### HU-064 | Consultar el historial de un equipo
 
 **Como** Responsable SST, **quiero** ver el historial de cada equipo, **para** demostrar su mantenimiento.
 
@@ -853,9 +852,9 @@ Cada historia termina con estos datos:
 - Veo todos los mantenimientos y reparaciones con fecha, responsable y fotografías.
 - Puedo filtrar por tipo y periodo.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-02 · **Reglas:** D17
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-063 · **Reglas:** D17
 
-### HU-M08-04 | Ver los mantenimientos vencidos
+### HU-065 | Ver los mantenimientos vencidos
 
 **Como** Responsable SST, **quiero** ver qué equipos tienen el mantenimiento vencido, **para** atenderlos primero.
 
@@ -864,9 +863,9 @@ Cada historia termina con estos datos:
 - Veo los equipos cuya próxima fecha ya pasó.
 - Los equipos de emergencia se distinguen claramente.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M08-01 · **Reglas:** RN-45
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-062 · **Reglas:** RN-45
 
-### HU-M08-05 | Crear una tarea de reparación
+### HU-066 | Crear una tarea de reparación
 
 **Como** responsable de mantenimiento, **quiero** crear una tarea cuando detecto un problema, **para** que se repare.
 
@@ -875,9 +874,9 @@ Cada historia termina con estos datos:
 - La tarea queda con origen "mantenimiento" y referencia al equipo.
 - Desde el equipo veo sus tareas abiertas.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M08-02, HU-M05-02 · **Reglas:** RN-23, D6
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-063, HU-043 · **Reglas:** RN-23, D6
 
-### HU-M08-06 | Registrar artículos e ingresos de EPP
+### HU-067 | Registrar artículos e ingresos de EPP
 
 **Como** Responsable SST, **quiero** registrar el equipo de protección personal que compra la empresa, **para** llevar su inventario.
 
@@ -886,9 +885,9 @@ Cada historia termina con estos datos:
 - Cada artículo tiene nombre, tipo y marca.
 - Registro cada ingreso con cantidad y fecha.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-02 · **Reglas:** arts. 9.f, 47.d, D18
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-027 · **Reglas:** arts. 9.f, 47.d, D18
 
-### HU-M08-07 | Registrar entregas de EPP
+### HU-068 | Registrar entregas de EPP
 
 **Como** Responsable SST, **quiero** registrar cada entrega de EPP, **para** saber qué recibió cada trabajador.
 
@@ -898,9 +897,9 @@ Cada historia termina con estos datos:
 - El trabajador no necesita cuenta en SST360.
 - No puedo entregar más de lo que hay en inventario.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-06 · **Reglas:** art. 47.d, RN-47, RN-48, D18
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-067 · **Reglas:** art. 47.d, RN-47, RN-48, D18
 
-### HU-M08-08 | Consultar inventario y entregas de EPP
+### HU-069 | Consultar inventario y entregas de EPP
 
 **Como** Responsable SST, **quiero** consultar el inventario y las entregas, **para** saber qué hay disponible y qué se ha entregado.
 
@@ -909,13 +908,13 @@ Cada historia termina con estos datos:
 - Veo el inventario de cada artículo, calculado a partir de ingresos y entregas.
 - Veo las entregas por área, puesto y periodo.
 
-**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M08-07 · **Reglas:** RN-46, D18
+**Módulo:** M8 · **Entrega:** E2 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-068 · **Reglas:** RN-46, D18
 
 ---
 
 ## M9. Políticas y procedimientos
 
-### HU-M09-01 | Generar un documento
+### HU-070 | Generar un documento
 
 **Como** Responsable SST, **quiero** generar una política o procedimiento desde una plantilla, **para** no empezar desde cero.
 
@@ -927,9 +926,9 @@ Cada historia termina con estos datos:
 - Queda como borrador.
 - Se avisa que la empresa debe revisar el contenido.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M02-01, HU-TEC-07 · **Reglas:** RN-49, D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-026, HU-097 · **Reglas:** RN-49, D13
 
-### HU-M09-02 | Editar el borrador
+### HU-071 | Editar el borrador
 
 **Como** Responsable SST, **quiero** editar el borrador, **para** adaptarlo a mi empresa.
 
@@ -938,9 +937,9 @@ Cada historia termina con estos datos:
 - Puedo modificar el contenido.
 - Los cambios se guardan sin alterar la plantilla.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M09-01 · **Reglas:** D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-070 · **Reglas:** D13
 
-### HU-M09-03 | Aprobar un documento
+### HU-072 | Aprobar un documento
 
 **Como** Responsable SST, **quiero** aprobar un documento, **para** dejarlo vigente.
 
@@ -950,9 +949,9 @@ Cada historia termina con estos datos:
 - Una versión aprobada no se puede editar.
 - Cada documento tiene una sola versión vigente.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M09-02 · **Reglas:** RN-50, RN-51, D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-071 · **Reglas:** RN-50, RN-51, D13
 
-### HU-M09-04 | Crear una versión nueva
+### HU-073 | Crear una versión nueva
 
 **Como** Responsable SST, **quiero** crear una versión nueva, **para** actualizar un documento sin perder el anterior.
 
@@ -961,9 +960,9 @@ Cada historia termina con estos datos:
 - La versión nueva parte de la vigente y queda como borrador.
 - Las versiones anteriores siguen disponibles para consulta.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M09-03 · **Reglas:** RN-50, D13
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-072 · **Reglas:** RN-50, D13
 
-### HU-M09-05 | Consultar los documentos vigentes
+### HU-074 | Consultar los documentos vigentes
 
 **Como** usuario de la empresa, **quiero** consultar los documentos vigentes, **para** conocer las políticas y procedimientos.
 
@@ -972,13 +971,13 @@ Cada historia termina con estos datos:
 - Veo solo las versiones vigentes.
 - Puedo buscar por nombre y descargar en PDF.
 
-**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M09-03 · **Reglas:** RN-05
+**Módulo:** M9 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-072 · **Reglas:** RN-05
 
 ---
 
 ## M10. Reportes
 
-### HU-M10-01 | Generar la matriz de riesgos en PDF
+### HU-075 | Generar la matriz de riesgos en PDF
 
 **Como** Responsable SST, **quiero** descargar la matriz de riesgos, **para** presentarla en una auditoría o inspección.
 
@@ -987,9 +986,9 @@ Cada historia termina con estos datos:
 - Incluye los riesgos por área, con evaluación inicial, residual y controles.
 - Indica la fecha de generación.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-04 · **Reglas:** art. 47.b, RN-52
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-038 · **Reglas:** art. 47.b, RN-52
 
-### HU-M10-02 | Generar las políticas en PDF
+### HU-076 | Generar las políticas en PDF
 
 **Como** Responsable SST, **quiero** descargar las políticas y procedimientos vigentes, **para** presentarlos o compartirlos.
 
@@ -998,9 +997,9 @@ Cada historia termina con estos datos:
 - Incluye solo las versiones vigentes.
 - Cada documento muestra su versión y fecha de aprobación.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M09-03 · **Reglas:** RN-51
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-072 · **Reglas:** RN-51
 
-### HU-M10-03 | Generar el informe semestral
+### HU-077 | Generar el informe semestral
 
 **Como** Responsable SST, **quiero** generar el informe semestral en PDF, **para** presentarlo a las autoridades de trabajo.
 
@@ -1011,9 +1010,9 @@ Cada historia termina con estos datos:
 - Usa los datos ya capturados.
 - La empresa descarga el PDF y lo presenta.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M06-01, HU-M07-06, HU-M08-02 · **Reglas:** art. 25.f, RN-52
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-047, HU-058, HU-063 · **Reglas:** art. 25.f, RN-52
 
-### HU-M10-04 | Generar el informe anual
+### HU-078 | Generar el informe anual
 
 **Como** Responsable SST, **quiero** generar el informe anual en PDF, **para** remitirlo a la Secretaría de Trabajo, con copia al IHSS.
 
@@ -1028,9 +1027,9 @@ Cada historia termina con estos datos:
 - Los objetivos cumplidos salen de las tareas completadas. Los retos y medidas los redacto antes de generar el informe.
 - El informe recuerda el plazo de la última quincena de noviembre y la copia al IHSS.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M10-03, HU-M02-01, HU-M07-02, HU-M06-02, HU-M04-04, HU-M08-03, HU-M08-08 · **Reglas:** art. 25.o, RN-52
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-077, HU-026, HU-054, HU-048, HU-038, HU-064, HU-069 · **Reglas:** art. 25.o, RN-52
 
-### HU-M10-05 | Descargar un acta en PDF
+### HU-079 | Descargar un acta en PDF
 
 **Como** usuario de la empresa, **quiero** descargar un acta firmada, **para** presentarla ante la autoridad.
 
@@ -1039,9 +1038,9 @@ Cada historia termina con estos datos:
 - Incluye contenido, asistentes, firmas y hash.
 - Solo se descargan actas firmadas.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M07-06 · **Reglas:** art. 33, D12
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-058 · **Reglas:** art. 33, D12
 
-### HU-M10-06 | Consultar los informes generados
+### HU-080 | Consultar los informes generados
 
 **Como** Responsable SST, **quiero** ver los reportes generados, **para** volver a descargarlos.
 
@@ -1050,13 +1049,13 @@ Cada historia termina con estos datos:
 - Veo tipo, periodo, autor y fecha.
 - Puedo descargar cada reporte de nuevo.
 
-**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M10-03 · **Reglas:** ninguna
+**Módulo:** M10 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-077 · **Reglas:** ninguna
 
 ---
 
 ## M11. Notificaciones
 
-### HU-M11-01 | Llevar las tareas al calendario
+### HU-081 | Llevar las tareas al calendario
 
 **Como** responsable de una tarea, **quiero** que su fecha límite aparezca en mi calendario, **para** no olvidarla.
 
@@ -1065,9 +1064,9 @@ Cada historia termina con estos datos:
 - Al asignar una tarea se crea un evento en su fecha límite e invita al responsable.
 - El recordatorio lo envía Google Calendar, también en el teléfono.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-09, HU-M05-02 · **Reglas:** RN-54, D16
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-025, HU-043 · **Reglas:** RN-54, D16
 
-### HU-M11-02 | Llevar las reuniones al calendario
+### HU-082 | Llevar las reuniones al calendario
 
 **Como** integrante de la comisión, **quiero** recibir la invitación a cada reunión, **para** asistir.
 
@@ -1076,9 +1075,9 @@ Cada historia termina con estos datos:
 - Al programar una reunión se crea un evento e invita a sus integrantes.
 - El evento indica tipo de reunión, lugar y temas.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M01-09, HU-M07-03 · **Reglas:** art. 24, RN-54, D16
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-025, HU-055 · **Reglas:** art. 24, RN-54, D16
 
-### HU-M11-03 | Llevar los mantenimientos al calendario
+### HU-083 | Llevar los mantenimientos al calendario
 
 **Como** responsable de mantenimiento, **quiero** que el próximo mantenimiento aparezca en mi calendario, **para** hacerlo a tiempo.
 
@@ -1087,9 +1086,9 @@ Cada historia termina con estos datos:
 - Al programar la próxima fecha de un equipo se crea un evento e invita a su responsable.
 - El evento indica el equipo y su identificador.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M01-09, HU-M08-01 · **Reglas:** RN-54, D16
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-025, HU-062 · **Reglas:** RN-54, D16
 
-### HU-M11-04 | Llevar informes y vencimientos al calendario
+### HU-084 | Llevar informes y vencimientos al calendario
 
 **Como** Responsable SST, **quiero** ver en mi calendario los informes y el vencimiento de la comisión, **para** cumplir los plazos.
 
@@ -1098,9 +1097,9 @@ Cada historia termina con estos datos:
 - Hay eventos para el informe semestral y para el anual, este en la última quincena de noviembre.
 - Hay un evento para el fin del periodo de la comisión.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-M01-09, HU-M07-02 · **Reglas:** arts. 21, 25.f, 25.o, RN-54
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Should · **Depende de:** HU-025, HU-054 · **Reglas:** arts. 21, 25.f, 25.o, RN-54
 
-### HU-M11-05 | Convocar tras un accidente grave
+### HU-085 | Convocar tras un accidente grave
 
 **Como** Responsable SST, **quiero** que un accidente grave convoque a la comisión, **para** cumplir la reunión extraordinaria.
 
@@ -1109,9 +1108,9 @@ Cada historia termina con estos datos:
 - Al registrar un accidente grave se propone una reunión extraordinaria.
 - Al confirmarla se crea el evento e invita a la comisión y al encargado del área.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M06-01, HU-M11-02 · **Reglas:** art. 32, RN-29, RN-54
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-047, HU-082 · **Reglas:** art. 32, RN-29, RN-54
 
-### HU-M11-06 | Mantener el calendario actualizado
+### HU-086 | Mantener el calendario actualizado
 
 **Como** usuario, **quiero** que el calendario refleje los cambios, **para** no ir a reuniones canceladas ni trabajar con fechas viejas.
 
@@ -1121,13 +1120,13 @@ Cada historia termina con estos datos:
 - Si algo se cancela o se elimina, su evento se elimina.
 - Si Google no responde, el cambio se guarda en SST360 y el evento se vuelve a intentar.
 
-**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-M11-01 · **Reglas:** RN-55, RN-56, D16
+**Módulo:** M11 · **Entrega:** E3 · **Dónde:** Web y teléfono · **Prioridad:** Must · **Depende de:** HU-081 · **Reglas:** RN-55, RN-56, D16
 
 ---
 
 ## M12. Panel de avance
 
-### HU-M12-01 | Ver el avance general
+### HU-087 | Ver el avance general
 
 **Como** Responsable SST, **quiero** ver un panel general, **para** saber cómo va la empresa.
 
@@ -1137,9 +1136,9 @@ Cada historia termina con estos datos:
 - Los datos se calculan a partir de los demás módulos.
 - Cada indicador lleva a su detalle.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-M04-05, HU-M05-02 · **Reglas:** RN-19
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-039, HU-043 · **Reglas:** RN-19
 
-### HU-M12-02 | Ver el estado de equipos y EPP
+### HU-088 | Ver el estado de equipos y EPP
 
 **Como** Responsable SST, **quiero** ver mantenimientos vencidos e inventario de EPP, **para** anticiparme.
 
@@ -1148,9 +1147,9 @@ Cada historia termina con estos datos:
 - Muestra los equipos con mantenimiento vencido, destacando los de emergencia.
 - Muestra el inventario de cada artículo de EPP.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M08-04, HU-M08-08 · **Reglas:** RN-45, RN-46
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-087, HU-065, HU-069 · **Reglas:** RN-45, RN-46
 
-### HU-M12-03 | Ver las obligaciones del mes
+### HU-089 | Ver las obligaciones del mes
 
 **Como** Responsable SST, **quiero** ver mis obligaciones del mes, **para** que no se me pasen.
 
@@ -1159,9 +1158,9 @@ Cada historia termina con estos datos:
 - Muestra la reunión mensual, los mantenimientos programados y los informes próximos.
 - En noviembre destaca el informe anual.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M07-03 · **Reglas:** arts. 24, 25.f, 25.o
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-087, HU-055 · **Reglas:** arts. 24, 25.f, 25.o
 
-### HU-M12-04 | Ver la documentación lista
+### HU-090 | Ver la documentación lista
 
 **Como** Responsable SST, **quiero** ver qué documentación tengo, **para** preparar una auditoría.
 
@@ -1170,13 +1169,13 @@ Cada historia termina con estos datos:
 - Muestra documentos vigentes, actas firmadas, reportes y evidencias por periodo.
 - Señala los periodos sin documentación.
 
-**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-M12-01, HU-M10-06 · **Reglas:** ninguna
+**Módulo:** M12 · **Entrega:** E3 · **Dónde:** Web · **Prioridad:** Should · **Depende de:** HU-087, HU-080 · **Reglas:** ninguna
 
 ---
 
 ## Trabajo técnico
 
-### HU-TEC-01 | Crear la solución con Clean Architecture
+### HU-091 | Crear la solución con Clean Architecture
 
 **Como** equipo, **quiero** crear la solución .NET por capas, **para** separar responsabilidades.
 
@@ -1186,9 +1185,9 @@ Cada historia termina con estos datos:
 - Las dependencias siguen la arquitectura aprobada.
 - Las funcionalidades se organizan por Vertical Slicing.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-13 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-013 · **Reglas:** ninguna
 
-### HU-TEC-02 | Configurar EF Core Code-First
+### HU-092 | Configurar EF Core Code-First
 
 **Como** equipo, **quiero** crear el modelo con EF Core y PostgreSQL, **para** versionar la base de datos.
 
@@ -1198,9 +1197,9 @@ Cada historia termina con estos datos:
 - Las migraciones incluyen restricciones e índices.
 - La base se crea desde cero con las migraciones.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-DIS-11 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-091, HU-011 · **Reglas:** ninguna
 
-### HU-TEC-03 | Aplicar filtros globales por empresa
+### HU-093 | Aplicar filtros globales por empresa
 
 **Como** equipo, **quiero** usar `HasQueryFilter`, **para** aislar los datos automáticamente.
 
@@ -1211,9 +1210,9 @@ Cada historia termina con estos datos:
 - Al guardar, `EmpresaId` se asigna desde la empresa activa.
 - El uso de `IgnoreQueryFilters` está limitado y justificado.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-02, HU-TEC-04 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D15
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-092, HU-094 · **Reglas:** RN-04, RN-05, RN-06, RN-07, D15
 
-### HU-TEC-04 | Implementar autenticación JWT
+### HU-094 | Implementar autenticación JWT
 
 **Como** equipo, **quiero** emitir y validar JWT, **para** identificar al usuario y su empresa activa.
 
@@ -1224,9 +1223,9 @@ Cada historia termina con estos datos:
 - Se validan firma, emisor, audiencia y expiración.
 - Un token inválido recibe 401.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-DIS-14, HU-TEC-01 · **Reglas:** RN-06, D1
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-014, HU-091 · **Reglas:** RN-06, D1
 
-### HU-TEC-05 | Implementar autorización por roles
+### HU-095 | Implementar autorización por roles
 
 **Como** equipo, **quiero** proteger los endpoints por rol, **para** que cada usuario haga solo lo permitido.
 
@@ -1236,9 +1235,9 @@ Cada historia termina con estos datos:
 - Un rol no permitido recibe 403.
 - Las acciones de la comisión se validan contra el cargo de la persona.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-04 · **Reglas:** RN-03, D3
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-094 · **Reglas:** RN-03, D3
 
-### HU-TEC-06 | Validar con FluentValidation
+### HU-096 | Validar con FluentValidation
 
 **Como** equipo, **quiero** validar las entradas y centralizar los errores, **para** responder de forma uniforme.
 
@@ -1248,9 +1247,9 @@ Cada historia termina con estos datos:
 - Un middleware global convierte los errores a la estructura acordada.
 - Los errores no exponen detalles internos.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-DIS-12 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-091, HU-012 · **Reglas:** ninguna
 
-### HU-TEC-07 | Cargar los catálogos iniciales
+### HU-097 | Cargar los catálogos iniciales
 
 **Como** equipo, **quiero** cargar rubros, categorías de riesgo, preguntas exploratorias, peligros y plantillas, **para** que el sistema tenga contenido desde el inicio.
 
@@ -1261,9 +1260,9 @@ Cada historia termina con estos datos:
 - Repetir la carga no duplica datos.
 - El contenido usa redacción propia y lo revisa alguien con conocimiento de SST.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-02 · **Reglas:** D7
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-092 · **Reglas:** D7
 
-### HU-TEC-08 | Probar el aislamiento entre empresas
+### HU-098 | Probar el aislamiento entre empresas
 
 **Como** equipo, **quiero** pruebas automáticas de aislamiento, **para** demostrar que ninguna empresa accede a datos ajenos.
 
@@ -1273,9 +1272,9 @@ Cada historia termina con estos datos:
 - Referenciar un registro de otra empresa se rechaza.
 - Cambiar `EmpresaId` en la petición no tiene efecto.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-03 · **Reglas:** RN-05, RN-06, RN-07, D15
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-093 · **Reglas:** RN-05, RN-06, RN-07, D15
 
-### HU-TEC-09 | Registrar la auditoría de acciones
+### HU-099 | Registrar la auditoría de acciones
 
 **Como** equipo, **quiero** registrar las acciones importantes, **para** que la evidencia sea verificable.
 
@@ -1285,9 +1284,9 @@ Cada historia termina con estos datos:
 - El registro no se puede editar desde la aplicación.
 - Cubre al menos firmas, aprobaciones, cambios de rol, mantenimientos y entregas de EPP.
 
-**Módulo:** Técnico · **Entrega:** E3 · **Dónde:** No aplica · **Prioridad:** Should · **Depende de:** HU-TEC-03 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E3 · **Dónde:** No aplica · **Prioridad:** Should · **Depende de:** HU-093 · **Reglas:** ninguna
 
-### HU-TEC-10 | Configurar el almacenamiento de archivos
+### HU-100 | Configurar el almacenamiento de archivos
 
 **Como** equipo, **quiero** guardar fotos y evidencias en un servicio externo gratuito, **para** no perderlas al reiniciar el servidor.
 
@@ -1298,9 +1297,9 @@ Cada historia termina con estos datos:
 - Los archivos sobreviven a un reinicio del backend.
 - Los archivos de una empresa no son accesibles para otra.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-TEC-03 · **Reglas:** RN-05, D14
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-091, HU-093 · **Reglas:** RN-05, D14
 
-### HU-TEC-11 | Crear el frontend web por funcionalidades
+### HU-101 | Crear el frontend web por funcionalidades
 
 **Como** equipo, **quiero** organizar el proyecto React por funcionalidades, **para** evitar componentes gigantes.
 
@@ -1309,9 +1308,9 @@ Cada historia termina con estos datos:
 - Usa React, TypeScript y Vite.
 - Hay carpetas `features/` por módulo.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-DIS-12 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-012 · **Reglas:** ninguna
 
-### HU-TEC-12 | Proteger las rutas
+### HU-102 | Proteger las rutas
 
 **Como** equipo, **quiero** guardias con `react-router-dom`, **para** bloquear a usuarios sin JWT.
 
@@ -1321,9 +1320,9 @@ Cada historia termina con estos datos:
 - Un rol sin permiso no ve esa pantalla.
 - Un token vencido cierra la sesión.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-TEC-11, HU-TEC-04 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-101, HU-094 · **Reglas:** ninguna
 
-### HU-TEC-13 | Validar con Zod y React Hook Form
+### HU-103 | Validar con Zod y React Hook Form
 
 **Como** equipo, **quiero** validar en vivo los campos de la interfaz, **para** dar respuesta inmediata.
 
@@ -1333,9 +1332,9 @@ Cada historia termina con estos datos:
 - Las reglas coinciden con FluentValidation.
 - No hay validaciones manuales con `if/else`.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-TEC-11, HU-TEC-06 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-101, HU-096 · **Reglas:** ninguna
 
-### HU-TEC-14 | Centralizar las peticiones HTTP
+### HU-104 | Centralizar las peticiones HTTP
 
 **Como** equipo, **quiero** interceptores de Axios y un extractor universal de errores, **para** manejar token y fallos en un solo lugar.
 
@@ -1345,9 +1344,9 @@ Cada historia termina con estos datos:
 - El extractor convierte cualquier error en un mensaje claro.
 - Mientras el servidor se reactiva, se muestra un estado de carga.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-TEC-11 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-101 · **Reglas:** ninguna
 
-### HU-TEC-15 | Crear la base de la app para teléfono
+### HU-105 | Crear la base de la app para teléfono
 
 **Como** equipo, **quiero** crear la aplicación para teléfono, **para** hacer el trabajo de campo.
 
@@ -1358,9 +1357,9 @@ Cada historia termina con estos datos:
 - Inicia sesión y consume la misma API que la web.
 - Puede usar la cámara del teléfono.
 
-**Módulo:** Técnico · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-TEC-04, HU-DIS-12 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-094, HU-012 · **Reglas:** ninguna
 
-### HU-TEC-16 | Crear el Dockerfile de la API
+### HU-106 | Crear el Dockerfile de la API
 
 **Como** equipo, **quiero** un Dockerfile multi-stage, **para** compilar con el SDK y ejecutar en un runtime ligero de Alpine.
 
@@ -1370,9 +1369,9 @@ Cada historia termina con estos datos:
 - La imagen final usa runtime Alpine.
 - La generación de PDF funciona dentro de esa imagen.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-091 · **Reglas:** ninguna
 
-### HU-TEC-17 | Levantar todo con Docker Compose
+### HU-107 | Levantar todo con Docker Compose
 
 **Como** equipo, **quiero** un `docker-compose.yml`, **para** levantar el sistema local con un solo comando.
 
@@ -1382,9 +1381,9 @@ Cada historia termina con estos datos:
 - La API se conecta a la base y aplica migraciones.
 - Funciona en una máquina limpia con las instrucciones del repositorio.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-16 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-106 · **Reglas:** ninguna
 
-### HU-TEC-18 | Desplegar la base de datos
+### HU-108 | Desplegar la base de datos
 
 **Como** equipo, **quiero** PostgreSQL en Neon o Supabase, **para** tener una base gratuita en la nube.
 
@@ -1393,9 +1392,9 @@ Cada historia termina con estos datos:
 - La base tiene migraciones y catálogos cargados.
 - Las credenciales no están en el repositorio.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-02, HU-TEC-07 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-092, HU-097 · **Reglas:** ninguna
 
-### HU-TEC-19 | Desplegar el backend
+### HU-109 | Desplegar el backend
 
 **Como** equipo, **quiero** publicar la API en Render o Fly.io, **para** exponerla con HTTPS.
 
@@ -1405,9 +1404,9 @@ Cada historia termina con estos datos:
 - La API responde por HTTPS y usa la base en la nube.
 - Solo acepta peticiones de los clientes autorizados.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-16, HU-TEC-18 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-106, HU-108 · **Reglas:** ninguna
 
-### HU-TEC-20 | Desplegar el frontend web
+### HU-110 | Desplegar el frontend web
 
 **Como** equipo, **quiero** publicar el cliente en Vercel o Netlify, **para** tener el sistema completo en la nube.
 
@@ -1417,9 +1416,9 @@ Cada historia termina con estos datos:
 - Las rutas funcionan al recargar la página.
 - El flujo principal funciona de punta a punta en producción.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-TEC-11, HU-TEC-19 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** Web · **Prioridad:** Must · **Depende de:** HU-101, HU-109 · **Reglas:** ninguna
 
-### HU-TEC-21 | Automatizar el despliegue
+### HU-111 | Automatizar el despliegue
 
 **Como** equipo, **quiero** que cada `git push` a `main` actualice producción, **para** cumplir la integración continua del curso.
 
@@ -1428,9 +1427,9 @@ Cada historia termina con estos datos:
 - Un push a `main` actualiza backend y frontend sin pasos manuales.
 - El equipo lo demuestra con un cambio real.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-19, HU-TEC-20 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-109, HU-110 · **Reglas:** ninguna
 
-### HU-TEC-22 | Distribuir la app para pruebas
+### HU-112 | Distribuir la app para pruebas
 
 **Como** equipo, **quiero** instalar la app en teléfonos reales, **para** probarla y demostrarla.
 
@@ -1439,9 +1438,9 @@ Cada historia termina con estos datos:
 - Se puede instalar sin costo en los teléfonos del equipo.
 - La app usa la API de producción.
 
-**Módulo:** Técnico · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-TEC-15, HU-TEC-19 · **Reglas:** ninguna
+**Módulo:** Técnico · **Entrega:** E2 · **Dónde:** Teléfono · **Prioridad:** Must · **Depende de:** HU-105, HU-109 · **Reglas:** ninguna
 
-### HU-TEC-23 | Integrar con Google Forms y Google Calendar
+### HU-113 | Integrar con Google Forms y Google Calendar
 
 **Como** equipo, **quiero** conectar SST360 con las APIs de Google, **para** generar encuestas, leer respuestas y gestionar eventos.
 
@@ -1453,7 +1452,7 @@ Cada historia termina con estos datos:
 - Se pueden crear, actualizar y eliminar eventos con invitados.
 - Los errores y límites de uso de Google se manejan sin perder datos.
 
-**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-TEC-01, HU-TEC-03 · **Reglas:** RN-05, RN-53, D16
+**Módulo:** Técnico · **Entrega:** E1 · **Dónde:** No aplica · **Prioridad:** Must · **Depende de:** HU-091, HU-093 · **Reglas:** RN-05, RN-53, D16
 
 ---
 
@@ -1463,116 +1462,116 @@ Total: 113 historias: 90 Must y 23 Should. Por entrega: Diseño 16, E1 44, E2 25
 
 | ID | Historia | Módulo | Entrega | Dónde | Prioridad |
 |---|---|---|---|---|---|
-| HU-DIS-01 | Aprobar el alcance | Diseño | Diseño | No aplica | Must |
-| HU-DIS-02 | Documentar los requerimientos funcionales | Diseño | Diseño | No aplica | Must |
-| HU-DIS-03 | Documentar los requerimientos no funcionales | Diseño | Diseño | No aplica | Must |
-| HU-DIS-04 | Validar las reglas de negocio | Diseño | Diseño | No aplica | Must |
-| HU-DIS-05 | Priorizar el backlog | Diseño | Diseño | No aplica | Must |
-| HU-DIS-06 | Elaborar casos de uso | Diseño | Diseño | No aplica | Should |
-| HU-DIS-07 | Documentar los flujos principales | Diseño | Diseño | No aplica | Must |
-| HU-DIS-08 | Elaborar el diccionario de datos | Diseño | Diseño | No aplica | Must |
-| HU-DIS-09 | Definir el aislamiento multiempresa | Diseño | Diseño | No aplica | Must |
-| HU-DIS-10 | Diseñar el diagrama entidad-relación | Diseño | Diseño | No aplica | Must |
-| HU-DIS-11 | Definir restricciones e índices | Diseño | Diseño | No aplica | Must |
-| HU-DIS-12 | Definir los contratos de la API | Diseño | Diseño | No aplica | Must |
-| HU-DIS-13 | Diseñar la arquitectura del backend | Diseño | Diseño | No aplica | Must |
-| HU-DIS-14 | Diseñar autenticación y autorización | Diseño | Diseño | No aplica | Must |
-| HU-DIS-15 | Redactar el pitch de 1 página | Diseño | Diseño | No aplica | Must |
-| HU-DIS-16 | Configurar el tablero Kanban | Diseño | Diseño | No aplica | Must |
-| HU-M01-01 | Registrar mi empresa | M1 | E1 | Web | Must |
-| HU-M01-02 | Iniciar y cerrar sesión | M1 | E1 | Web y teléfono | Must |
-| HU-M01-03 | Cambiar de empresa | M1 | E1 | Web y teléfono | Must |
-| HU-M01-04 | Agregar usuarios | M1 | E1 | Web | Must |
-| HU-M01-05 | Gestionar roles y membresías | M1 | E1 | Web | Must |
-| HU-M01-06 | Cambiar mi contraseña | M1 | E1 | Web y teléfono | Should |
-| HU-M01-07 | Administrar los catálogos | M1 | E3 | Web | Should |
-| HU-M01-08 | Consultar las empresas registradas | M1 | E3 | Web | Should |
-| HU-M01-09 | Conectar la cuenta de Google | M1 | E1 | Web | Must |
-| HU-M02-01 | Completar el perfil | M2 | E1 | Web | Must |
-| HU-M02-02 | Registrar áreas | M2 | E1 | Web | Must |
-| HU-M02-03 | Calcular la composición de la comisión | M2 | E2 | Web | Must |
-| HU-M03-01 | Elegir categorías de riesgo | M3 | E1 | Web | Must |
-| HU-M03-02 | Generar la encuesta en Google Forms | M3 | E1 | Web | Must |
-| HU-M03-03 | Importar las respuestas | M3 | E1 | Web | Must |
-| HU-M03-04 | Ver el resumen de respuestas | M3 | E1 | Web | Must |
-| HU-M03-05 | Obtener peligros sugeridos | M3 | E1 | Web | Must |
-| HU-M03-06 | Consultar encuestas anteriores | M3 | E3 | Web | Should |
-| HU-M04-01 | Confirmar los peligros sugeridos | M4 | E1 | Web | Must |
-| HU-M04-02 | Agregar riesgos | M4 | E1 | Web | Must |
-| HU-M04-03 | Evaluar un riesgo | M4 | E1 | Web | Must |
-| HU-M04-04 | Ver la matriz de riesgos | M4 | E1 | Web | Must |
-| HU-M04-05 | Definir controles | M4 | E1 | Web | Must |
-| HU-M04-06 | Evaluar el riesgo residual | M4 | E1 | Web | Should |
-| HU-M04-07 | Consultar el historial de un riesgo | M4 | E3 | Web | Should |
-| HU-M05-01 | Generar el plan | M5 | E1 | Web | Must |
-| HU-M05-02 | Asignar tareas | M5 | E1 | Web | Must |
-| HU-M05-03 | Atender mis tareas | M5 | E1 | Web y teléfono | Must |
-| HU-M05-04 | Adjuntar evidencia | M5 | E1 | Web y teléfono | Must |
-| HU-M05-05 | Filtrar el plan | M5 | E3 | Web | Should |
-| HU-M06-01 | Reportar un evento | M6 | E2 | Web y teléfono | Must |
-| HU-M06-02 | Registrar a las personas afectadas | M6 | E2 | Web | Must |
-| HU-M06-03 | Investigar un evento | M6 | E2 | Web | Must |
-| HU-M06-04 | Definir medidas correctivas | M6 | E2 | Web | Must |
-| HU-M06-05 | Actualizar la matriz tras un evento | M6 | E2 | Web | Should |
-| HU-M06-06 | Consultar estadísticas | M6 | E2 | Web | Should |
-| HU-M07-01 | Constituir la comisión | M7 | E2 | Web | Must |
-| HU-M07-02 | Registrar los integrantes | M7 | E2 | Web | Must |
-| HU-M07-03 | Programar reuniones | M7 | E2 | Web | Must |
-| HU-M07-04 | Registrar asistencia y quórum | M7 | E2 | Web | Must |
-| HU-M07-05 | Redactar el acta | M7 | E2 | Web | Must |
-| HU-M07-06 | Aprobar y firmar el acta | M7 | E2 | Web y teléfono | Must |
-| HU-M07-07 | Convertir acuerdos en tareas | M7 | E2 | Web | Should |
-| HU-M07-08 | Consultar el historial de actas | M7 | E2 | Web | Must |
-| HU-M07-09 | Renovar la comisión | M7 | E3 | Web | Should |
-| HU-M08-01 | Registrar equipos | M8 | E2 | Web | Must |
-| HU-M08-02 | Registrar un mantenimiento o reparación | M8 | E2 | Web y teléfono | Must |
-| HU-M08-03 | Consultar el historial de un equipo | M8 | E2 | Web | Must |
-| HU-M08-04 | Ver los mantenimientos vencidos | M8 | E2 | Web | Should |
-| HU-M08-05 | Crear una tarea de reparación | M8 | E2 | Web y teléfono | Should |
-| HU-M08-06 | Registrar artículos e ingresos de EPP | M8 | E2 | Web | Must |
-| HU-M08-07 | Registrar entregas de EPP | M8 | E2 | Web | Must |
-| HU-M08-08 | Consultar inventario y entregas de EPP | M8 | E2 | Web | Must |
-| HU-M09-01 | Generar un documento | M9 | E3 | Web | Must |
-| HU-M09-02 | Editar el borrador | M9 | E3 | Web | Must |
-| HU-M09-03 | Aprobar un documento | M9 | E3 | Web | Must |
-| HU-M09-04 | Crear una versión nueva | M9 | E3 | Web | Should |
-| HU-M09-05 | Consultar los documentos vigentes | M9 | E3 | Web y teléfono | Should |
-| HU-M10-01 | Generar la matriz de riesgos en PDF | M10 | E3 | Web | Must |
-| HU-M10-02 | Generar las políticas en PDF | M10 | E3 | Web | Must |
-| HU-M10-03 | Generar el informe semestral | M10 | E3 | Web | Must |
-| HU-M10-04 | Generar el informe anual | M10 | E3 | Web | Must |
-| HU-M10-05 | Descargar un acta en PDF | M10 | E3 | Web | Must |
-| HU-M10-06 | Consultar los informes generados | M10 | E3 | Web | Should |
-| HU-M11-01 | Llevar las tareas al calendario | M11 | E3 | Web y teléfono | Must |
-| HU-M11-02 | Llevar las reuniones al calendario | M11 | E3 | Web y teléfono | Must |
-| HU-M11-03 | Llevar los mantenimientos al calendario | M11 | E3 | Web y teléfono | Should |
-| HU-M11-04 | Llevar informes y vencimientos al calendario | M11 | E3 | Web y teléfono | Should |
-| HU-M11-05 | Convocar tras un accidente grave | M11 | E3 | Web y teléfono | Must |
-| HU-M11-06 | Mantener el calendario actualizado | M11 | E3 | Web y teléfono | Must |
-| HU-M12-01 | Ver el avance general | M12 | E3 | Web | Must |
-| HU-M12-02 | Ver el estado de equipos y EPP | M12 | E3 | Web | Should |
-| HU-M12-03 | Ver las obligaciones del mes | M12 | E3 | Web | Should |
-| HU-M12-04 | Ver la documentación lista | M12 | E3 | Web | Should |
-| HU-TEC-01 | Crear la solución con Clean Architecture | Técnico | E1 | No aplica | Must |
-| HU-TEC-02 | Configurar EF Core Code-First | Técnico | E1 | No aplica | Must |
-| HU-TEC-03 | Aplicar filtros globales por empresa | Técnico | E1 | No aplica | Must |
-| HU-TEC-04 | Implementar autenticación JWT | Técnico | E1 | No aplica | Must |
-| HU-TEC-05 | Implementar autorización por roles | Técnico | E1 | No aplica | Must |
-| HU-TEC-06 | Validar con FluentValidation | Técnico | E1 | No aplica | Must |
-| HU-TEC-07 | Cargar los catálogos iniciales | Técnico | E1 | No aplica | Must |
-| HU-TEC-08 | Probar el aislamiento entre empresas | Técnico | E1 | No aplica | Must |
-| HU-TEC-09 | Registrar la auditoría de acciones | Técnico | E3 | No aplica | Should |
-| HU-TEC-10 | Configurar el almacenamiento de archivos | Técnico | E1 | No aplica | Must |
-| HU-TEC-11 | Crear el frontend web por funcionalidades | Técnico | E1 | Web | Must |
-| HU-TEC-12 | Proteger las rutas | Técnico | E1 | Web | Must |
-| HU-TEC-13 | Validar con Zod y React Hook Form | Técnico | E1 | Web | Must |
-| HU-TEC-14 | Centralizar las peticiones HTTP | Técnico | E1 | Web | Must |
-| HU-TEC-15 | Crear la base de la app para teléfono | Técnico | E2 | Teléfono | Must |
-| HU-TEC-16 | Crear el Dockerfile de la API | Técnico | E1 | No aplica | Must |
-| HU-TEC-17 | Levantar todo con Docker Compose | Técnico | E1 | No aplica | Must |
-| HU-TEC-18 | Desplegar la base de datos | Técnico | E1 | No aplica | Must |
-| HU-TEC-19 | Desplegar el backend | Técnico | E1 | No aplica | Must |
-| HU-TEC-20 | Desplegar el frontend web | Técnico | E1 | Web | Must |
-| HU-TEC-21 | Automatizar el despliegue | Técnico | E1 | No aplica | Must |
-| HU-TEC-22 | Distribuir la app para pruebas | Técnico | E2 | Teléfono | Must |
-| HU-TEC-23 | Integrar con Google Forms y Google Calendar | Técnico | E1 | No aplica | Must |
+| HU-001 | Aprobar el alcance | Diseño | Diseño | No aplica | Must |
+| HU-002 | Documentar los requerimientos funcionales | Diseño | Diseño | No aplica | Must |
+| HU-003 | Documentar los requerimientos no funcionales | Diseño | Diseño | No aplica | Must |
+| HU-004 | Validar las reglas de negocio | Diseño | Diseño | No aplica | Must |
+| HU-005 | Priorizar el backlog | Diseño | Diseño | No aplica | Must |
+| HU-006 | Elaborar casos de uso | Diseño | Diseño | No aplica | Should |
+| HU-007 | Documentar los flujos principales | Diseño | Diseño | No aplica | Must |
+| HU-008 | Elaborar el diccionario de datos | Diseño | Diseño | No aplica | Must |
+| HU-009 | Definir el aislamiento multiempresa | Diseño | Diseño | No aplica | Must |
+| HU-010 | Diseñar el diagrama entidad-relación | Diseño | Diseño | No aplica | Must |
+| HU-011 | Definir restricciones e índices | Diseño | Diseño | No aplica | Must |
+| HU-012 | Definir los contratos de la API | Diseño | Diseño | No aplica | Must |
+| HU-013 | Diseñar la arquitectura del backend | Diseño | Diseño | No aplica | Must |
+| HU-014 | Diseñar autenticación y autorización | Diseño | Diseño | No aplica | Must |
+| HU-015 | Redactar el pitch de 1 página | Diseño | Diseño | No aplica | Must |
+| HU-016 | Configurar el tablero Kanban | Diseño | Diseño | No aplica | Must |
+| HU-017 | Registrar mi empresa | M1 | E1 | Web | Must |
+| HU-018 | Iniciar y cerrar sesión | M1 | E1 | Web y teléfono | Must |
+| HU-019 | Cambiar de empresa | M1 | E1 | Web y teléfono | Must |
+| HU-020 | Agregar usuarios | M1 | E1 | Web | Must |
+| HU-021 | Gestionar roles y membresías | M1 | E1 | Web | Must |
+| HU-022 | Cambiar mi contraseña | M1 | E1 | Web y teléfono | Should |
+| HU-023 | Administrar los catálogos | M1 | E3 | Web | Should |
+| HU-024 | Consultar las empresas registradas | M1 | E3 | Web | Should |
+| HU-025 | Conectar la cuenta de Google | M1 | E1 | Web | Must |
+| HU-026 | Completar el perfil | M2 | E1 | Web | Must |
+| HU-027 | Registrar áreas | M2 | E1 | Web | Must |
+| HU-028 | Calcular la composición de la comisión | M2 | E2 | Web | Must |
+| HU-029 | Elegir categorías de riesgo | M3 | E1 | Web | Must |
+| HU-030 | Generar la encuesta en Google Forms | M3 | E1 | Web | Must |
+| HU-031 | Importar las respuestas | M3 | E1 | Web | Must |
+| HU-032 | Ver el resumen de respuestas | M3 | E1 | Web | Must |
+| HU-033 | Obtener peligros sugeridos | M3 | E1 | Web | Must |
+| HU-034 | Consultar encuestas anteriores | M3 | E3 | Web | Should |
+| HU-035 | Confirmar los peligros sugeridos | M4 | E1 | Web | Must |
+| HU-036 | Agregar riesgos | M4 | E1 | Web | Must |
+| HU-037 | Evaluar un riesgo | M4 | E1 | Web | Must |
+| HU-038 | Ver la matriz de riesgos | M4 | E1 | Web | Must |
+| HU-039 | Definir controles | M4 | E1 | Web | Must |
+| HU-040 | Evaluar el riesgo residual | M4 | E1 | Web | Should |
+| HU-041 | Consultar el historial de un riesgo | M4 | E3 | Web | Should |
+| HU-042 | Generar el plan | M5 | E1 | Web | Must |
+| HU-043 | Asignar tareas | M5 | E1 | Web | Must |
+| HU-044 | Atender mis tareas | M5 | E1 | Web y teléfono | Must |
+| HU-045 | Adjuntar evidencia | M5 | E1 | Web y teléfono | Must |
+| HU-046 | Filtrar el plan | M5 | E3 | Web | Should |
+| HU-047 | Reportar un evento | M6 | E2 | Web y teléfono | Must |
+| HU-048 | Registrar a las personas afectadas | M6 | E2 | Web | Must |
+| HU-049 | Investigar un evento | M6 | E2 | Web | Must |
+| HU-050 | Definir medidas correctivas | M6 | E2 | Web | Must |
+| HU-051 | Actualizar la matriz tras un evento | M6 | E2 | Web | Should |
+| HU-052 | Consultar estadísticas | M6 | E2 | Web | Should |
+| HU-053 | Constituir la comisión | M7 | E2 | Web | Must |
+| HU-054 | Registrar los integrantes | M7 | E2 | Web | Must |
+| HU-055 | Programar reuniones | M7 | E2 | Web | Must |
+| HU-056 | Registrar asistencia y quórum | M7 | E2 | Web | Must |
+| HU-057 | Redactar el acta | M7 | E2 | Web | Must |
+| HU-058 | Aprobar y firmar el acta | M7 | E2 | Web y teléfono | Must |
+| HU-059 | Convertir acuerdos en tareas | M7 | E2 | Web | Should |
+| HU-060 | Consultar el historial de actas | M7 | E2 | Web | Must |
+| HU-061 | Renovar la comisión | M7 | E3 | Web | Should |
+| HU-062 | Registrar equipos | M8 | E2 | Web | Must |
+| HU-063 | Registrar un mantenimiento o reparación | M8 | E2 | Web y teléfono | Must |
+| HU-064 | Consultar el historial de un equipo | M8 | E2 | Web | Must |
+| HU-065 | Ver los mantenimientos vencidos | M8 | E2 | Web | Should |
+| HU-066 | Crear una tarea de reparación | M8 | E2 | Web y teléfono | Should |
+| HU-067 | Registrar artículos e ingresos de EPP | M8 | E2 | Web | Must |
+| HU-068 | Registrar entregas de EPP | M8 | E2 | Web | Must |
+| HU-069 | Consultar inventario y entregas de EPP | M8 | E2 | Web | Must |
+| HU-070 | Generar un documento | M9 | E3 | Web | Must |
+| HU-071 | Editar el borrador | M9 | E3 | Web | Must |
+| HU-072 | Aprobar un documento | M9 | E3 | Web | Must |
+| HU-073 | Crear una versión nueva | M9 | E3 | Web | Should |
+| HU-074 | Consultar los documentos vigentes | M9 | E3 | Web y teléfono | Should |
+| HU-075 | Generar la matriz de riesgos en PDF | M10 | E3 | Web | Must |
+| HU-076 | Generar las políticas en PDF | M10 | E3 | Web | Must |
+| HU-077 | Generar el informe semestral | M10 | E3 | Web | Must |
+| HU-078 | Generar el informe anual | M10 | E3 | Web | Must |
+| HU-079 | Descargar un acta en PDF | M10 | E3 | Web | Must |
+| HU-080 | Consultar los informes generados | M10 | E3 | Web | Should |
+| HU-081 | Llevar las tareas al calendario | M11 | E3 | Web y teléfono | Must |
+| HU-082 | Llevar las reuniones al calendario | M11 | E3 | Web y teléfono | Must |
+| HU-083 | Llevar los mantenimientos al calendario | M11 | E3 | Web y teléfono | Should |
+| HU-084 | Llevar informes y vencimientos al calendario | M11 | E3 | Web y teléfono | Should |
+| HU-085 | Convocar tras un accidente grave | M11 | E3 | Web y teléfono | Must |
+| HU-086 | Mantener el calendario actualizado | M11 | E3 | Web y teléfono | Must |
+| HU-087 | Ver el avance general | M12 | E3 | Web | Must |
+| HU-088 | Ver el estado de equipos y EPP | M12 | E3 | Web | Should |
+| HU-089 | Ver las obligaciones del mes | M12 | E3 | Web | Should |
+| HU-090 | Ver la documentación lista | M12 | E3 | Web | Should |
+| HU-091 | Crear la solución con Clean Architecture | Técnico | E1 | No aplica | Must |
+| HU-092 | Configurar EF Core Code-First | Técnico | E1 | No aplica | Must |
+| HU-093 | Aplicar filtros globales por empresa | Técnico | E1 | No aplica | Must |
+| HU-094 | Implementar autenticación JWT | Técnico | E1 | No aplica | Must |
+| HU-095 | Implementar autorización por roles | Técnico | E1 | No aplica | Must |
+| HU-096 | Validar con FluentValidation | Técnico | E1 | No aplica | Must |
+| HU-097 | Cargar los catálogos iniciales | Técnico | E1 | No aplica | Must |
+| HU-098 | Probar el aislamiento entre empresas | Técnico | E1 | No aplica | Must |
+| HU-099 | Registrar la auditoría de acciones | Técnico | E3 | No aplica | Should |
+| HU-100 | Configurar el almacenamiento de archivos | Técnico | E1 | No aplica | Must |
+| HU-101 | Crear el frontend web por funcionalidades | Técnico | E1 | Web | Must |
+| HU-102 | Proteger las rutas | Técnico | E1 | Web | Must |
+| HU-103 | Validar con Zod y React Hook Form | Técnico | E1 | Web | Must |
+| HU-104 | Centralizar las peticiones HTTP | Técnico | E1 | Web | Must |
+| HU-105 | Crear la base de la app para teléfono | Técnico | E2 | Teléfono | Must |
+| HU-106 | Crear el Dockerfile de la API | Técnico | E1 | No aplica | Must |
+| HU-107 | Levantar todo con Docker Compose | Técnico | E1 | No aplica | Must |
+| HU-108 | Desplegar la base de datos | Técnico | E1 | No aplica | Must |
+| HU-109 | Desplegar el backend | Técnico | E1 | No aplica | Must |
+| HU-110 | Desplegar el frontend web | Técnico | E1 | Web | Must |
+| HU-111 | Automatizar el despliegue | Técnico | E1 | No aplica | Must |
+| HU-112 | Distribuir la app para pruebas | Técnico | E2 | Teléfono | Must |
+| HU-113 | Integrar con Google Forms y Google Calendar | Técnico | E1 | No aplica | Must |

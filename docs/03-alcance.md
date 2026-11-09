@@ -34,7 +34,7 @@ La tecnología para construirlo se decidirá más adelante.
 
 ## Cómo se construye: un MVP en 3 entregas
 
-Antes de escribir código, el equipo completa el diseño (historias HU-DIS). Después, el MVP se construye en 3 entregas, ordenadas según lo que depende de qué.
+Antes de escribir código, el equipo completa el diseño (historias HU-001 a HU-016). Después, el MVP se construye en 3 entregas, ordenadas según lo que depende de qué.
 
 | Entrega | Módulos | Qué se puede demostrar al terminar |
 |---|---|---|
