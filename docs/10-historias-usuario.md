@@ -255,7 +255,6 @@ Cada historia termina con estos datos:
 **Criterios de aceptación:**
 
 - Con una sola membresía activa entro directamente a esa empresa.
-- Con varias membresías debo elegir una.
 - Las credenciales incorrectas reciben un mensaje que no revela qué dato falló.
 - Una membresía desactivada no da acceso a esa empresa.
 
