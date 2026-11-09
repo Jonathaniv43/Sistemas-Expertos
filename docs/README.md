@@ -10,6 +10,7 @@ SST360 es el proyecto final de la clase de Sistemas Expertos (UNAH, III PAC 2026
 1. [Visión del producto](01-vision-producto.md): qué vamos a construir y para quién.
 2. [Alcance](03-alcance.md): qué entra, qué no y en qué orden se construye.
 3. [Módulos](04-modulos.md): qué hace cada parte del sistema.
+4. [Sprint backlog de la entrega actual](13-sprint-backlog.md): qué historias se construyen primero para la Fase 1 y Fase 2.
 
 Si una palabra no te resulta conocida, búscala en el [glosario](11-glosario.md).
 
@@ -29,6 +30,7 @@ Si una palabra no te resulta conocida, búscala en el [glosario](11-glosario.md)
 | [10-historias-usuario.md](10-historias-usuario.md) | Todo el trabajo, historia por historia | Todos |
 | [11-glosario.md](11-glosario.md) | Significado de términos y siglas | Consulta |
 | [12-modelo-datos.md](12-modelo-datos.md) | Tablas, columnas, relaciones, restricciones e índices | Quien diseñe o programe |
+| [13-sprint-backlog.md](13-sprint-backlog.md) | Sprint backlog priorizado para Fase 1 y 2 (entrega actual) | Desarrolladores y evaluadores |
 
 ## Lo que el equipo debe aprobar
 
@@ -38,4 +40,5 @@ Si una palabra no te resulta conocida, búscala en el [glosario](11-glosario.md)
 
 ## Siguiente paso
 
-El [modelo de datos](12-modelo-datos.md) es la propuesta para las historias HU-DIS-08 a HU-DIS-11 de [historias de usuario](10-historias-usuario.md). El equipo debe revisarlo antes de pasarlo a EF Core.
+1. El [modelo de datos](12-modelo-datos.md) es la propuesta para las historias HU-008 a HU-011 de [historias de usuario](10-historias-usuario.md). El equipo debe revisarlo antes de pasarlo a EF Core.
+2. Seguir el [sprint backlog](13-sprint-backlog.md) para ejecutar las historias prioritarias de la Fase 1 (análisis y gobierno ágil) y Fase 2 (backend transaccional .NET + PostgreSQL).
